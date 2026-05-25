@@ -5,7 +5,22 @@
 **GitHub 倉庫（完整 `_ignite_mod` 資料夾）：** https://github.com/pullum327/dongwu-odyssey-mod
 
 ---
+## Mod 一覽
 
+在 [`mods_enabled.json`](mods_enabled.json) 中設 `true` / `false` 開關各 mod。  
+執行 `python "_ignite_mod\apply_mods.py" --list` 可查看目前狀態。
+
+| 分類 | Mod ID | 修改目標 |
+|------|--------|----------|
+| 火煉 | `ignite_no_consume` | `GameAssembly.dll` |
+| 火煉 | `ignite_changming_triple` | `GameAssembly.dll` |
+| 打磨 | `polish_max_level` | `game_data.ab` |
+| 打磨 | `polish_soul_siphon` | `game_data.ab` + 語系文案 |
+| 詞條 | `effect_self_heal` | `game_data.ab` |
+| 怪物 | `enemy_hp_multiplier` | `game_data.ab` |
+| 卡池 | `gacha_xijin_pool` | `game_data.ab` |
+| 造型 | `costume_default_models` | `game_data.ab` + 語系文案 |
+| 裝備 | `equipment_XXXXXXX` | `game_data.ab`（部分含語系文案） |
 ## 從 GitHub 取得（首次安裝）
 
 本倉庫 **就是** 整個 `_ignite_mod` 工具資料夾的內容（`apply_mods.py`、`mods/`、bat 等）。  
