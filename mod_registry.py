@@ -22,9 +22,8 @@ from mods.equipment_defs import (
     apply_equipment_yaso_moonflower,
 )
 from mods.gacha_defs import apply_gacha_xijin_pool
-from mods.mod_texts import apply_shenwei_texts, apply_soul_siphon_texts
+from mods.mod_texts import apply_costume_texts, apply_shenwei_texts, apply_soul_siphon_texts
 from mods.polish_defs import apply_polish_max_level, apply_polish_soul_siphon
-from patch_costume import _restore_costume_texts
 from patch_ignite import apply_ignite_changming_triple, apply_ignite_no_consume
 
 ModKind = Literal["dll", "game_data", "strings"]
@@ -45,12 +44,6 @@ def _apply_ignite_no_consume(pe: pefile.PE, data: bytearray, backup: bytes) -> N
 
 def _apply_ignite_changming(pe: pefile.PE, data: bytearray, backup: bytes) -> None:
     apply_ignite_changming_triple(pe, data, backup)
-
-
-def _apply_costume_texts() -> None:
-    changed = _restore_costume_texts()
-    if changed:
-        print(f"  [ok]   costume_default_models 文案 {changed} 項")
 
 
 ALL_MODS: tuple[ModSpec, ...] = (
@@ -181,7 +174,7 @@ MOD_BY_ID = {mod.id: mod for mod in ALL_MODS}
 STRING_MODS: dict[str, Callable[[], None]] = {
     "equipment_1510003": apply_shenwei_texts,
     "polish_soul_siphon": apply_soul_siphon_texts,
-    "costume_default_models": _apply_costume_texts,
+    "costume_default_models": apply_costume_texts,
 }
 
 DEFAULT_ENABLED = {mod.id: True for mod in ALL_MODS}

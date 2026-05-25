@@ -112,3 +112,96 @@ def apply_soul_siphon_texts() -> None:
     changed = apply_text_keys(SOUL_SIPHON_TEXT_KEYS)
     if changed:
         print(f"  [ok]   text_soul_siphon UI 文案 {changed} 項")
+
+
+COSTUME_TEXT_BY_FILE: tuple[tuple[Path, Mapping[str, str]], ...] = (
+    (
+        STREAMING_DIR / "strings.json",
+        {
+            "ChrCostume_Buy_Button_Hint": "{0}金龙解锁",
+            "ChrCostume_Buy_Title": "解锁皮肤",
+            "ChrCostume_Buy_Content": "是否使用<color=#D6CBA4>{0}金龙</color>购买<color=#1FC8D5>{1}</color>?",
+            "ChrCostume_Dress_Button_Hint": "替换",
+            "ChrCostume_Dress_Succee_Hint": "替换装扮完成",
+            "ChrCostume_Dress_Failed_Same_Hint": "已替换为该装扮",
+            "ChrCostume_GoTo_Unlock_Hint": "前往解锁",
+            "ChrCostume_Unlock_Hint": "已解锁",
+            "ChrCostume_NoHero_Hint": "还没有此角色",
+        },
+    ),
+    (
+        STREAMING_DIR / "Languages" / "zh-Hant" / "zh-Hant.json",
+        {
+            "ChrCostume_Buy_Button_Hint": "{0}金龍解鎖",
+            "ChrCostume_Buy_Title": "解鎖裝扮",
+            "ChrCostume_Buy_Content": "是否使用<color=#D6CBA4>{0}金龍</color>購買<color=#1FC8D5>{1}</color>?",
+            "ChrCostume_Dress_Button_Hint": "替換",
+            "ChrCostume_Dress_Succee_Hint": "替換裝扮完成",
+            "ChrCostume_Dress_Failed_Same_Hint": "已替換為該裝扮",
+            "ChrCostume_GoTo_Unlock_Hint": "前往解鎖",
+            "ChrCostume_Unlock_Hint": "已解鎖",
+            "ChrCostume_NoHero_Hint": "還沒有此角色",
+        },
+    ),
+    (
+        STREAMING_DIR / "Languages" / "en-US" / "en-US.json",
+        {
+            "ChrCostume_Buy_Button_Hint": "{0} Unlock",
+            "ChrCostume_Buy_Title": "Unlock",
+            "ChrCostume_Buy_Content": "Do you want to use <color=#D6CBA4>{0} Golden Dragon</color> to purchase <color=#1FC8D5>{1}</color>?",
+            "ChrCostume_Dress_Button_Hint": "replace",
+            "ChrCostume_Dress_Succee_Hint": "Complete the costume change",
+            "ChrCostume_Dress_Failed_Same_Hint": "Replaced with this outfit",
+            "ChrCostume_GoTo_Unlock_Hint": "Go to Unlock",
+            "ChrCostume_Unlock_Hint": "Unlocked",
+            "ChrCostume_NoHero_Hint": "There is no such role yet",
+        },
+    ),
+)
+
+
+def _replace_top_level_keys(payload: Any, replacements: Mapping[str, str]) -> int:
+    changed = 0
+    if isinstance(payload, dict):
+        for key, value in replacements.items():
+            if payload.get(key) != value:
+                payload[key] = value
+                changed += 1
+        for value in payload.values():
+            if isinstance(value, (dict, list)):
+                changed += _replace_top_level_keys(value, replacements)
+    elif isinstance(payload, list):
+        for item in payload:
+            changed += _replace_top_level_keys(item, replacements)
+    return changed
+
+
+def apply_costume_texts() -> None:
+    total = 0
+    for path, replacements in COSTUME_TEXT_BY_FILE:
+        if not path.exists():
+            continue
+        backup = _language_backup_path(path)
+        if not backup.exists():
+            shutil.copy2(path, backup)
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        changed = _replace_top_level_keys(payload, replacements)
+        if changed:
+            path.write_text(
+                json.dumps(payload, ensure_ascii=False, separators=(",", ":")),
+                encoding="utf-8",
+            )
+            total += changed
+    if total:
+        print(f"  [ok]   text_costume UI 文案 {total} 項")
+
+
+def restore_costume_texts() -> None:
+    restored = 0
+    for path, _replacements in COSTUME_TEXT_BY_FILE:
+        backup = _language_backup_path(path)
+        if backup.exists():
+            shutil.copy2(backup, path)
+            restored += 1
+    if restored:
+        print(f"  [restore] 角色造型文案 {restored} 個檔案")

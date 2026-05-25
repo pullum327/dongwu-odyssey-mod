@@ -21,8 +21,7 @@ import pefile
 from game_data import restore_game_data_from_backup
 from mod_registry import ALL_MODS, DEFAULT_ENABLED, MOD_BY_ID, STRING_MODS
 from patch_common import DLL, sha256, write_dll
-from patch_costume import restore_costume_texts
-from patch_gacha import restore_gacha_data
+from mods.mod_texts import apply_costume_texts, restore_costume_texts
 
 ROOT = Path(__file__).resolve().parent
 GAME_ROOT = ROOT.parent
@@ -104,7 +103,6 @@ def restore_all() -> None:
     if not BACKUP.exists():
         raise SystemExit(f"沒有備份 {BACKUP}")
     shutil.copy2(BACKUP, DLL)
-    restore_gacha_data()
     restore_costume_texts()
     restore_game_data_from_backup()
     print(f"已還原 {DLL} 與 game_data.ab")
