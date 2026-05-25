@@ -78,7 +78,6 @@ python "_ignite_mod\apply_mods.py" --enable polish_soul_siphon --save
 在 `_ignite_mod` 資料夾內雙擊：
 
 - [`套用全部Mod.bat`](套用全部Mod.bat) — 套用 `mods_enabled.json` 中所有 `true` 的 mod  
-- [`套用火煉Mod.bat`](套用火煉Mod.bat) — 只套用兩個火煉 mod（不寫入設定檔）
 
 **方式 B — 命令列**
 
