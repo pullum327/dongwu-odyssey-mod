@@ -4,6 +4,7 @@
   "polish_max_level": true,
   "polish_soul_siphon": true,
   "effect_self_heal": true,
+  "equipment_quality5_rules": true,
   "enemy_hp_multiplier": true,
   "gacha_xijin_pool": true,
   "costume_default_models": true,

@@ -299,6 +299,7 @@ python "_ignite_mod\apply_mods.py" --list
 | 打磨 | `polish_max_level` | 所有打磨池詞條固定為該效果滿級 | `game_data.ab` |
 | 打磨 | `polish_soul_siphon` | 新增「靈魂虹吸」並加入全部打磨池 | `game_data.ab` + 語系文案 |
 | 詞條 | `effect_self_heal` | 全局「自愈」3 級：+12 生命、+10 瘴氣 | `game_data.ab` |
+| 裝備規則 | `equipment_quality5_rules` | 傳奇（quality 5）可多件穿戴、可火煉 | `game_data.ab` |
 | 怪物 | `enemy_hp_multiplier` | 強力怪物與 Boss 血量 ×2 | `game_data.ab` |
 | 卡池 | `gacha_xijin_pool` | 希金交易會只抽史詩，並調整池內裝備 | `game_data.ab` |
 | 造型 | `costume_default_models` | 2 名角色預設改為課金造型模型 | `game_data.ab` + 語系文案 |
@@ -367,6 +368,29 @@ python "_ignite_mod\apply_mods.py" --list
 
 - 恢復 **12** 點生命值
 - 恢復 **10** 點瘴氣
+
+---
+
+### 裝備規則
+
+#### `equipment_quality5_rules` — 傳奇裝備多件穿戴 + 可火煉
+
+修改 `globalconfig.json` 與 `equipment.json` 中 **quality = 5**（傳奇／橙裝）的規則：
+
+| 項目 | 原版 | Mod 後 |
+|------|------|--------|
+| 單角色傳奇裝備上限 | `EquipmentLegendarySumLimit = 1` | 改為 **0**（不限制件數） |
+| 傳奇可否火煉 | `enhanceIgniteTag` 為空 → 不可 | 依部位填入火煉標籤 |
+
+火煉標籤對照（與史詩裝備相同）：
+
+| 部位 `equipmentPart` | `enhanceIgniteTag` |
+|----------------------|---------------------|
+| 1（武器） | `weapon`, `adventure` |
+| 2（防具） | `armour`, `adventure` |
+| 3（飾品） | `jewelry`, `adventure` |
+
+> 需搭配火煉 DLL mod 或預修補包中的火煉 patch 才能實際進行火煉流程；本 mod 只解除「傳奇不可火煉」的資料限制。
 
 ---
 

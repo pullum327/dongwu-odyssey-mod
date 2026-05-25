@@ -21,6 +21,7 @@ from mods.equipment_defs import (
     apply_equipment_xibeiwang,
     apply_equipment_yaso_moonflower,
 )
+from mods.equipment_rules_defs import apply_equipment_quality5_rules
 from mods.gacha_defs import apply_gacha_xijin_pool
 from mods.mod_texts import apply_costume_texts, apply_shenwei_texts, apply_soul_siphon_texts
 from mods.polish_defs import apply_polish_max_level, apply_polish_soul_siphon
@@ -81,6 +82,13 @@ ALL_MODS: tuple[ModSpec, ...] = (
         "詞條",
         "game_data",
         apply_effect_self_heal,
+    ),
+    ModSpec(
+        "equipment_quality5_rules",
+        "傳奇裝備多件穿戴 + 可火煉",
+        "裝備規則",
+        "game_data",
+        apply_equipment_quality5_rules,
     ),
     ModSpec(
         "enemy_hp_multiplier",
