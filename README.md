@@ -3,7 +3,24 @@
 修改 `GameAssembly.dll`（IL2CPP）與 `game_data.ab`（資料）。**請先完全關閉遊戲**再套用；Steam 更新遊戲後需重新執行套用。
 
 ---
+```
+## Mod 一覽
 
+在 [`mods_enabled.json`](mods_enabled.json) 中設 `true` / `false` 開關各 mod。  
+執行 `python "_ignite_mod\apply_mods.py" --list` 可查看目前狀態。
+
+| 分類 | Mod ID | 修改目標 |
+|------|--------|----------|
+| 火煉 | `ignite_no_consume` | `GameAssembly.dll` |
+| 火煉 | `ignite_changming_triple` | `GameAssembly.dll` |
+| 打磨 | `polish_max_level` | `game_data.ab` |
+| 打磨 | `polish_soul_siphon` | `game_data.ab` + 語系文案 |
+| 詞條 | `effect_self_heal` | `game_data.ab` |
+| 怪物 | `enemy_hp_multiplier` | `game_data.ab` |
+| 卡池 | `gacha_xijin_pool` | `game_data.ab` |
+| 造型 | `costume_default_models` | `game_data.ab` + 語系文案 |
+| 裝備 | `equipment_XXXXXXX` | `game_data.ab`（部分含語系文案） |
+```
 ## 套用 Mod 詳細步驟
 
 ### 步驟 0：確認環境（首次使用）
@@ -161,22 +178,6 @@ Copy-Item -Force "GameAssembly.dll.ignite_mod.bak" "GameAssembly.dll"
 
 ---
 
-## Mod 一覽
-
-在 [`mods_enabled.json`](mods_enabled.json) 中設 `true` / `false` 開關各 mod。  
-執行 `python "_ignite_mod\apply_mods.py" --list` 可查看目前狀態。
-
-| 分類 | Mod ID | 修改目標 |
-|------|--------|----------|
-| 火煉 | `ignite_no_consume` | `GameAssembly.dll` |
-| 火煉 | `ignite_changming_triple` | `GameAssembly.dll` |
-| 打磨 | `polish_max_level` | `game_data.ab` |
-| 打磨 | `polish_soul_siphon` | `game_data.ab` + 語系文案 |
-| 詞條 | `effect_self_heal` | `game_data.ab` |
-| 怪物 | `enemy_hp_multiplier` | `game_data.ab` |
-| 卡池 | `gacha_xijin_pool` | `game_data.ab` |
-| 造型 | `costume_default_models` | `game_data.ab` + 語系文案 |
-| 裝備 | `equipment_XXXXXXX` | `game_data.ab`（部分含語系文案） |
 
 ---
 
