@@ -169,16 +169,32 @@ item["negativeAttribute"] = []
 | `polish_max_level` | 池內 `"效果ID_等級"` 的等級改為該 effect 的 levelLimit |
 | `polish_soul_siphon` | 新增 effect 7599003，並在**每個** pool 的 `effect` 陣列加入 `"7599003_1"` |
 
-只加到特定裝備池：改 `apply_polish_soul_siphon`，依 `pool["poolID"]` 或裝備 id 篩選，不要對全部 pool  append。
+只加到特定裝備池：改 `apply_polish_soul_siphon`，依 `pool["poolID"]` 或裝備 id 篩選，不要對全部 pool append。
 
 ---
 
-## 五、套用與還原
+## 五、全局詞條效果（非單件裝備）
+
+**檔案：** [`mods/effect_defs.py`](mods/effect_defs.py)  
+**Mod ID：** `effect_self_heal`（分類「詞條」，與「打磨」「裝備」分開）
+
+修改既有 `equipmenteffect.json` 中某個 effect 的等級/module，例如自愈 `7400023` 三級：
+
+```python
+self_heal["Lv3ModuleID"] = [742301, 742303]
+self_heal["Lv3Param1"] = ["12", "-10"]  # 回血12、降10瘴氣
+```
+
+新增全局詞條 mod：在 `effect_defs.py` 加函式 → `mod_registry.py` 註冊（category=`詞條`）→ `mods_enabled.json` 開關。
+
+---
+
+## 六、套用與還原
 
 ```powershell
 # 改完 gacha / 裝備 / 打磨 後（只動 game_data.ab）
 python apply_mods.py --only gacha_xijin_pool
-python apply_mods.py --only equipment_1410009
+python apply_mods.py --only effect_self_heal
 
 # 改完火煉後（動 DLL）
 python apply_mods.py --only ignite_changming_triple

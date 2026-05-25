@@ -9,9 +9,9 @@ import pefile
 from game_data import GameDataSession
 from mods.costume_defs import apply_costume_default_models
 from mods.enemy_defs import apply_enemy_hp_multiplier
+from mods.effect_defs import apply_effect_self_heal
 from mods.equipment_defs import (
     apply_equipment_actor_feather,
-    apply_equipment_effect_self_heal,
     apply_equipment_giant_lizard_bone,
     apply_equipment_savage_muzzle,
     apply_equipment_soft_light_robe,
@@ -74,6 +74,13 @@ ALL_MODS: tuple[ModSpec, ...] = (
         "打磨",
         "game_data",
         apply_polish_soul_siphon,
+    ),
+    ModSpec(
+        "effect_self_heal",
+        "自愈詞條 3 級強化",
+        "詞條",
+        "game_data",
+        apply_effect_self_heal,
     ),
     ModSpec(
         "enemy_hp_multiplier",
@@ -158,13 +165,6 @@ ALL_MODS: tuple[ModSpec, ...] = (
         "裝備",
         "game_data",
         apply_equipment_actor_feather,
-    ),
-    ModSpec(
-        "equipment_effect_7400023",
-        "自愈詞條 3 級強化",
-        "裝備",
-        "game_data",
-        apply_equipment_effect_self_heal,
     ),
 )
 
