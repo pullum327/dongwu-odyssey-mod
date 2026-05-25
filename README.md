@@ -2,6 +2,56 @@
 
 修改 `GameAssembly.dll`（IL2CPP）與 `game_data.ab`（資料）。**請先完全關閉遊戲**再套用；Steam 更新遊戲後需重新執行套用。
 
+**GitHub 倉庫（完整 `_ignite_mod` 資料夾）：** https://github.com/pullum327/dongwu-odyssey-mod
+
+---
+
+## 從 GitHub 取得（首次安裝）
+
+本倉庫 **就是** 整個 `_ignite_mod` 工具資料夾的內容（`apply_mods.py`、`mods/`、bat 等）。  
+其他人若遊戲目錄裡還沒有 `_ignite_mod`，請依下列方式下載，並放到遊戲根目錄。
+
+**遊戲根目錄範例：**
+
+```
+C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\
+```
+
+### 方式 A — Git 克隆（建議）
+
+在 PowerShell 執行（**資料夾名稱必須是 `_ignite_mod`**）：
+
+```powershell
+cd "C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey"
+git clone https://github.com/pullum327/dongwu-odyssey-mod.git _ignite_mod
+```
+
+克隆完成後應出現：
+
+```
+C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\_ignite_mod\apply_mods.py
+```
+
+> 若已克隆成 `dongwu-odyssey-mod` 等其他名稱，請將該資料夾**重新命名**為 `_ignite_mod`。
+
+### 方式 B — 下載 ZIP
+
+1. 開啟 https://github.com/pullum327/dongwu-odyssey-mod  
+2. 點 **Code → Download ZIP**  
+3. 解壓縮後，將資料夾重新命名為 **`_ignite_mod`**  
+4. 整個 `_ignite_mod` 資料夾移動到遊戲根目錄（與 `GameAssembly.dll` 同一層）
+
+### 方式 C — 更新已有 `_ignite_mod`
+
+若之前已克隆過，在 `_ignite_mod` 內執行：
+
+```powershell
+cd "C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\_ignite_mod"
+git pull
+```
+
+取得資料夾後，繼續下方 [**套用 Mod 詳細步驟**](#套用-mod-詳細步驟)（安裝 Python 依賴 → 關遊戲 → 執行 bat）。
+
 ---
 ## Mod 一覽
 
@@ -127,6 +177,7 @@ python "_ignite_mod\apply_mods.py" --enable polish_soul_siphon --save
 在 `_ignite_mod` 資料夾內雙擊：
 
 - [`套用全部Mod.bat`](套用全部Mod.bat) — 套用 `mods_enabled.json` 中所有 `true` 的 mod  
+- [`套用火煉Mod.bat`](套用火煉Mod.bat) — 只套用兩個火煉 mod（不寫入設定檔）
 
 **方式 B — 命令列**
 
