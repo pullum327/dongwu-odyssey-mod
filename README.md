@@ -97,3 +97,23 @@ pip install pefile keystone-engine UnityPy
 ## 風險
 
 修改遊戲二進位可能違反使用者條款；請自行承擔風險並僅用於單機／離線測試。
+
+---
+
+## 發布到 GitHub
+
+本目錄已初始化 git，遠端為 `https://github.com/pullum327/dongwu-odyssey-mod`。
+
+首次推送（需先登入 GitHub）：
+
+```powershell
+cd "_ignite_mod"
+gh auth login
+gh repo create dongwu-odyssey-mod --public --source=. --remote=origin --push
+```
+
+若遠端 repo 已存在，只需：
+
+```powershell
+git push -u origin main
+```
