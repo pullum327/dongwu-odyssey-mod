@@ -9,3 +9,6 @@ venv/
 *.bak
 *.patched
 GameAssembly.dll*
+
+# 預修補 Release 建包輸出
+dist/

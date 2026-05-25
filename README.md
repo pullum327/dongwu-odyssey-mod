@@ -42,7 +42,20 @@ C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\_ignite_mod\apply_m
 3. 解壓縮後，將資料夾重新命名為 **`_ignite_mod`**  
 4. 整個 `_ignite_mod` 資料夾移動到遊戲根目錄（與 `GameAssembly.dll` 同一層）
 
-### 方式 C — 更新已有 `_ignite_mod`
+### 方式 D — 預修補包 Releases（不需 Python）
+
+若不想安裝 Python，可到 [GitHub Releases](https://github.com/pullum327/dongwu-odyssey-mod/releases) 下載對應 **resourceVersion** 的 ZIP：
+
+| Tag | 內容 |
+|-----|------|
+| `prebuilt-full-rv1` | 全部 mod（DLL + game_data.ab + 語系） |
+| `prebuilt-ignite-rv1` | 僅火煉（只覆蓋 `GameAssembly.dll`） |
+
+解壓後依 ZIP 內 `INSTALL.md` 覆蓋到遊戲根目錄。**Steam 更新後可能失效**，需等新版本 Release 或改用具 `_ignite_mod` 工具自行套用。
+
+---
+
+### 方式 C — 更新已有 `_ignite_mod`（工具版）
 
 若之前已克隆過，在 `_ignite_mod` 內執行：
 
