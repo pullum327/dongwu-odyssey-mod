@@ -4,22 +4,40 @@
 
 ---
 
-## Mod 一覽
+## 安裝位置（必讀）
 
-在 [`mods_enabled.json`](mods_enabled.json) 中設 `true` / `false` 開關各 mod。  
-執行 `python "_ignite_mod\apply_mods.py" --list` 可查看目前狀態。
+本工具資料夾 `_ignite_mod` **必須放在遊戲根目錄下**，完整路徑如下：
 
-| 分類 | Mod ID | 修改目標 |
-|------|--------|----------|
-| 火煉 | `ignite_no_consume` | `GameAssembly.dll` |
-| 火煉 | `ignite_changming_triple` | `GameAssembly.dll` |
-| 打磨 | `polish_max_level` | `game_data.ab` |
-| 打磨 | `polish_soul_siphon` | `game_data.ab` + 語系文案 |
-| 詞條 | `effect_self_heal` | `game_data.ab` |
-| 怪物 | `enemy_hp_multiplier` | `game_data.ab` |
-| 卡池 | `gacha_xijin_pool` | `game_data.ab` |
-| 造型 | `costume_default_models` | `game_data.ab` + 語系文案 |
-| 裝備 | `equipment_XXXXXXX` | `game_data.ab`（部分含語系文案） |
+```
+C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\_ignite_mod\
+```
+
+對應的**遊戲根目錄**（命令列要先 `cd` 到這裡）：
+
+```
+C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\
+```
+
+Steam 預設安裝即為此位置。若你改過 Steam 函式庫路徑，請自行對應到實際的 `Dongwu Odyssey` 資料夾，但 `_ignite_mod` 一定要與 `GameAssembly.dll` **同一層**。
+
+正確結構：
+
+```
+C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\
+  GameAssembly.dll              ← 會被修補
+  AnimOdyssey_Data\
+    StreamingAssets\
+      Assets\game_data.ab       ← 會被修補
+  _ignite_mod\                  ← 本 mod 工具（必須在此）
+    apply_mods.py
+    mods_enabled.json
+    套用全部Mod.bat
+```
+
+> **常見錯誤：** 若已在 `_ignite_mod` 資料夾內，又執行 `python "_ignite_mod\apply_mods.py"`，路徑會變成 `_ignite_mod\_ignite_mod\...` 而找不到檔案。  
+> 命令列請先 `cd` 到**遊戲根目錄**，或直接在 `_ignite_mod` 內**雙擊 bat**（bat 會自動切到正確目錄）。
+
+---
 
 ## 套用 Mod 詳細步驟
 
@@ -32,18 +50,13 @@
 pip install pefile keystone-engine UnityPy
 ```
 
-3. 確認遊戲目錄結構正確（本資料夾應在遊戲根目錄下）：
+3. 確認 `_ignite_mod` 已放在遊戲根目錄（見上方 [**安裝位置**](#安裝位置必讀)）：
 
 ```
-Dongwu Odyssey/
-  GameAssembly.dll          ← 會被修補
-  AnimOdyssey_Data/
-    StreamingAssets/
-      Assets/game_data.ab   ← 會被修補
-  _ignite_mod/              ← 本 mod 工具
-    apply_mods.py
-    mods_enabled.json
+C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\_ignite_mod\
 ```
+
+且同層要有 `GameAssembly.dll` 與 `AnimOdyssey_Data\`。
 
 ---
 
@@ -77,7 +90,7 @@ Dongwu Odyssey/
 
 儲存檔案後繼續步驟 3。
 
-也可用指令查看／調整（不必手動編輯 JSON）：
+也可用指令查看／調整（**先 cd 到遊戲根目錄**，不必手動編輯 JSON）：
 
 ```powershell
 cd "C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey"
@@ -85,6 +98,9 @@ python "_ignite_mod\apply_mods.py" --list
 python "_ignite_mod\apply_mods.py" --disable gacha_xijin_pool --save
 python "_ignite_mod\apply_mods.py" --enable polish_soul_siphon --save
 ```
+
+> 以下所有 `python "_ignite_mod\apply_mods.py"` 指令，工作目錄都必須是  
+> `C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey`（不是 `_ignite_mod` 裡面）。
 
 ---
 
@@ -106,6 +122,7 @@ python "_ignite_mod\apply_mods.py"
 **方式 C — 單次套用指定 mod（不改 mods_enabled.json）**
 
 ```powershell
+cd "C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey"
 python "_ignite_mod\apply_mods.py" --only ignite_no_consume,enemy_hp_multiplier
 ```
 
@@ -178,6 +195,28 @@ Copy-Item -Force "GameAssembly.dll.ignite_mod.bak" "GameAssembly.dll"
 
 ---
 
+## Mod 一覽
+
+在 [`mods_enabled.json`](mods_enabled.json) 中設 `true` / `false` 開關各 mod。
+
+```powershell
+cd "C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey"
+python "_ignite_mod\apply_mods.py" --list
+```
+
+可查看目前開關狀態。
+
+| 分類 | Mod ID | 修改目標 |
+|------|--------|----------|
+| 火煉 | `ignite_no_consume` | `GameAssembly.dll` |
+| 火煉 | `ignite_changming_triple` | `GameAssembly.dll` |
+| 打磨 | `polish_max_level` | `game_data.ab` |
+| 打磨 | `polish_soul_siphon` | `game_data.ab` + 語系文案 |
+| 詞條 | `effect_self_heal` | `game_data.ab` |
+| 怪物 | `enemy_hp_multiplier` | `game_data.ab` |
+| 卡池 | `gacha_xijin_pool` | `game_data.ab` |
+| 造型 | `costume_default_models` | `game_data.ab` + 語系文案 |
+| 裝備 | `equipment_XXXXXXX` | `game_data.ab`（部分含語系文案） |
 
 ---
 
