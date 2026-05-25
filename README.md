@@ -1,4 +1,4 @@
-# 東吳大冒險 — 本機 Mod 修補
+# 安尼姆Mod — 本機 Mod 修補
 
 修改 `GameAssembly.dll`（IL2CPP）與 `game_data.ab`（資料）。**請先關閉遊戲**再套用；Steam 更新後需重新執行。
 
