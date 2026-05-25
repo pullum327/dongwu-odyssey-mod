@@ -1,0 +1,3088 @@
+{
+  "meta": {
+    "source": "assets/gamedata/item.json",
+    "total": 440
+  },
+  "items": [
+    {
+      "id": 100001,
+      "name": "银龙",
+      "itemType": 1,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 100099,
+      "name": "金龙",
+      "itemType": 1,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 100100,
+      "name": "金龙",
+      "itemType": 1,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 100200,
+      "name": "熔铸合金",
+      "itemType": 4,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 100201,
+      "name": "稀有熔铸合金",
+      "itemType": 4,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 100202,
+      "name": "传奇熔铸合金",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 100211,
+      "name": "海底焰",
+      "itemType": 4,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 100212,
+      "name": "高级通用火炼材料",
+      "itemType": 4,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 100301,
+      "name": "涯滋角斗徽章",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 100302,
+      "name": "金色徽章",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 100401,
+      "name": "历战精华",
+      "itemType": 4,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 800001,
+      "name": "红包",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 800002,
+      "name": "格朗商会的认证",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 800003,
+      "name": "黄衣护符",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 800004,
+      "name": "希金爷特殊徽章",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 800005,
+      "name": "希金爷的认证",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 800006,
+      "name": "历经磨难的经文",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 800007,
+      "name": "希金爷特殊徽章",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 800008,
+      "name": "黑豹印记",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 800009,
+      "name": "梅花印记",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 800010,
+      "name": "使者印记",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 800011,
+      "name": "尾尾印记",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 10000001,
+      "name": "长夜木",
+      "itemType": 2,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 10000002,
+      "name": "慢蹄的物资",
+      "itemType": 2,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 10000003,
+      "name": "商人的物资",
+      "itemType": 2,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 10000004,
+      "name": "失踪的货物",
+      "itemType": 2,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 10000005,
+      "name": "商会的信物",
+      "itemType": 2,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 10000006,
+      "name": "机密信件一",
+      "itemType": 2,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 10000007,
+      "name": "机密信件二",
+      "itemType": 2,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 10000008,
+      "name": "宴会邀请券",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 11000001,
+      "name": "商会的货物",
+      "itemType": 2,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 11000002,
+      "name": "一封密信",
+      "itemType": 2,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 11000003,
+      "name": "散落的货物",
+      "itemType": 2,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 11000004,
+      "name": "悬赏令",
+      "itemType": 2,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 11000005,
+      "name": "传家的宝石",
+      "itemType": 2,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 11000006,
+      "name": "商会的徽记",
+      "itemType": 2,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 11000007,
+      "name": "血花种",
+      "itemType": 2,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 11000008,
+      "name": "海盐石",
+      "itemType": 2,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 12000001,
+      "name": "《托利托游记》苍蓝记卷一",
+      "itemType": 2,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 12000002,
+      "name": "《托利托游记》苍蓝记卷二",
+      "itemType": 2,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 12000003,
+      "name": "《托利托游记》苍蓝记卷三",
+      "itemType": 2,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 12000004,
+      "name": "《托利托游记》苍蓝记卷四",
+      "itemType": 2,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 12000005,
+      "name": "《托利托游记》苍蓝记卷五",
+      "itemType": 2,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 12000006,
+      "name": "《托利托游记》苍蓝记卷六",
+      "itemType": 2,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 12000007,
+      "name": "《托利托游记》赤羽记卷一",
+      "itemType": 2,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 12000008,
+      "name": "《托利托游记》赤羽记卷二",
+      "itemType": 2,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 12000009,
+      "name": "无缺损的血花种",
+      "itemType": 2,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 12900001,
+      "name": "神之子的笔记一",
+      "itemType": 2,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 12900002,
+      "name": "神之子的笔记二",
+      "itemType": 2,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 12900003,
+      "name": "神之子的笔记三",
+      "itemType": 2,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 12900004,
+      "name": "神之子的笔记四",
+      "itemType": 2,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 12900005,
+      "name": "神之子的笔记五",
+      "itemType": 2,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 12900006,
+      "name": "神之子的笔记六",
+      "itemType": 2,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 13000001,
+      "name": "傅西之旗",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 13000002,
+      "name": "巴夏之旗",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 13000003,
+      "name": "红狐皇子之旗",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 13000004,
+      "name": "皇家守卫之旗",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 13000005,
+      "name": "红狐挑战之旗",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 13000006,
+      "name": "丹马挑战之旗",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 13000007,
+      "name": "天鹅挑战之旗",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 13000008,
+      "name": "黑豹挑战之旗",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 13000009,
+      "name": "攻略者之旗",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 13000020,
+      "name": "神子与浪人之旗",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 13000021,
+      "name": "WeGame预约之旗",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000002,
+      "name": "烟雾弹",
+      "itemType": 3,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000003,
+      "name": "正道护符",
+      "itemType": 4,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000006,
+      "name": "希金爷的邀请函",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000007,
+      "name": "巴夏邀请函",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000008,
+      "name": "精良武器",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000009,
+      "name": "精良铠甲",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000010,
+      "name": "精良饰品",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000011,
+      "name": "盗贼团的地图",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000012,
+      "name": "每日徽章任务",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000013,
+      "name": "每日银龙委托",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000014,
+      "name": "每日合金收集",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000015,
+      "name": "袋狼的藏宝图",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000016,
+      "name": "袋狼的藏宝图宝箱",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000017,
+      "name": "希金爷的高级邀请函",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000018,
+      "name": "招募交易会邀请函",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000019,
+      "name": "装备交易会邀请函",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000020,
+      "name": "猫舍票券",
+      "itemType": 4,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000021,
+      "name": "慢蹄的铃铛",
+      "itemType": 4,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000022,
+      "name": "友谊徽章",
+      "itemType": 4,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000023,
+      "name": "奇巧零件",
+      "itemType": 4,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000024,
+      "name": "小道消息",
+      "itemType": 4,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000025,
+      "name": "黑陨机巧宝盒",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000026,
+      "name": "铸铁机巧宝盒",
+      "itemType": 4,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000027,
+      "name": "铜质机巧宝盒",
+      "itemType": 4,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000028,
+      "name": "奇士逸闻-极",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000029,
+      "name": "奇士逸闻-进",
+      "itemType": 4,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000030,
+      "name": "奇士逸闻-启",
+      "itemType": 4,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000031,
+      "name": "红晶药丸",
+      "itemType": 4,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000041,
+      "name": "精力饮料",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20000111,
+      "name": "藏宝图任务宝箱",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 20002118,
+      "name": "希金爷的限时挑战",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 20010001,
+      "name": "格朗商会的奖励",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20010002,
+      "name": "格朗商会的奖励",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20010003,
+      "name": "格朗商会的奖励",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20010004,
+      "name": "史诗装备匣",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 20019001,
+      "name": "格朗商会的奖励",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20019002,
+      "name": "格朗商会的奖励",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20019003,
+      "name": "格朗商会的奖励",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20020041,
+      "name": "角斗大会首胜奖励",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20020042,
+      "name": "角斗入门段位奖励",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20020043,
+      "name": "角斗新手段位奖励",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20020044,
+      "name": "角斗胜者段位奖励",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20020045,
+      "name": "角斗专家段位奖励",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 20020046,
+      "name": "角斗大师段位奖励",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 20020052,
+      "name": "角斗入门升段奖励",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20020053,
+      "name": "角斗新手升段奖励",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20020054,
+      "name": "角斗胜者升段奖励",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20020055,
+      "name": "角斗专家升段奖励",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 20020056,
+      "name": "角斗大师升段奖励",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 20700001,
+      "name": "挑战宝箱一",
+      "itemType": 3,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 20700002,
+      "name": "挑战宝箱二",
+      "itemType": 3,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 20700003,
+      "name": "挑战宝箱三",
+      "itemType": 3,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 20700004,
+      "name": "挑战宝箱四",
+      "itemType": 3,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 20700005,
+      "name": "挑战宝箱五",
+      "itemType": 3,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 20700006,
+      "name": "挑战宝箱六",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20700007,
+      "name": "挑战宝箱七",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 20700008,
+      "name": "挑战宝箱八",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 20700009,
+      "name": "挑战宝箱九",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 20700010,
+      "name": "挑战宝箱十",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 20700011,
+      "name": "挑战宝箱十一",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 20700012,
+      "name": "挑战宝箱十二",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 20700013,
+      "name": "挑战宝箱十三",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000001,
+      "name": "冒牌货的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000002,
+      "name": "异化士兵的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000003,
+      "name": "皇家侍卫的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000004,
+      "name": "红狐皇子的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000005,
+      "name": "神之子的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000006,
+      "name": "黑暗舞者的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000007,
+      "name": "血色海盗的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000008,
+      "name": "金色毒药的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000009,
+      "name": "华彩将军的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000010,
+      "name": "寡妇商人的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000011,
+      "name": "天鹅公主的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000012,
+      "name": "独眼佣兵的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000013,
+      "name": "背叛者的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000014,
+      "name": "美食家的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000015,
+      "name": "歧路之子的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000016,
+      "name": "飞鼠大盗的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000017,
+      "name": "天才乐师的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000018,
+      "name": "慈悲领主的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000019,
+      "name": "白羽之首的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000020,
+      "name": "鼠与狮的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000021,
+      "name": "狸猫浪人的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000022,
+      "name": "长手炮的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000023,
+      "name": "彩羽公子的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000024,
+      "name": "嗜火刀匠的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000025,
+      "name": "黄衣残党的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000026,
+      "name": "山中灵药的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000027,
+      "name": "巨犀之子的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000028,
+      "name": "慈虎的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000029,
+      "name": "荒野花匠的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000030,
+      "name": "火药狂匠的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000031,
+      "name": "怯弱医者的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000032,
+      "name": "沙原刀客的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000033,
+      "name": "沼泽勇士的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22000034,
+      "name": "沙舟行医的徽章",
+      "itemType": 7,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22200001,
+      "name": "遗迹探索奖励",
+      "itemType": 3,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 22200002,
+      "name": "遗迹探索奖励",
+      "itemType": 3,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 22200003,
+      "name": "遗迹探索奖励",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 22200004,
+      "name": "遗迹探索奖励",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 22200005,
+      "name": "遗迹探索奖励",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 22200006,
+      "name": "遗迹探索奖励",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 23000011,
+      "name": "精良武器",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 23000012,
+      "name": "精良铠甲",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 23000013,
+      "name": "精良饰品",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 23000022,
+      "name": "徽章箱子",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 24000097,
+      "name": "测试放置宝箱3",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 24000098,
+      "name": "测试放置宝箱2",
+      "itemType": 4,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 24000099,
+      "name": "测试放置宝箱1",
+      "itemType": 4,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 27000001,
+      "name": "黄金指针",
+      "itemType": 4,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 27000011,
+      "name": "藏宝海湾罗盘-进",
+      "itemType": 4,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 27000012,
+      "name": "藏宝海湾罗盘-极",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 27000021,
+      "name": "黄衣大梦罗盘-进",
+      "itemType": 4,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 27000022,
+      "name": "黄衣大梦罗盘-极",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 27000031,
+      "name": "烂泥途罗盘-进",
+      "itemType": 4,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 27000032,
+      "name": "烂泥途罗盘-极",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 29900001,
+      "name": "安尼姆的荣誉徽章",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 41210001,
+      "name": "青铜剑胚",
+      "itemType": 6,
+      "quality": 2,
+      "equipmentID": 1210001
+    },
+    {
+      "id": 41210002,
+      "name": "粗制投石",
+      "itemType": 6,
+      "quality": 2,
+      "equipmentID": 1210002
+    },
+    {
+      "id": 41210003,
+      "name": "简易木棍",
+      "itemType": 6,
+      "quality": 2,
+      "equipmentID": 1210003
+    },
+    {
+      "id": 41210004,
+      "name": "孩童木剑",
+      "itemType": 6,
+      "quality": 2,
+      "equipmentID": 1210001
+    },
+    {
+      "id": 41210005,
+      "name": "黄铜草叉",
+      "itemType": 6,
+      "quality": 2,
+      "equipmentID": 1210001
+    },
+    {
+      "id": 41220001,
+      "name": "老旧布甲",
+      "itemType": 6,
+      "quality": 2,
+      "equipmentID": 1220001
+    },
+    {
+      "id": 41220002,
+      "name": "巡逻披风",
+      "itemType": 6,
+      "quality": 2,
+      "equipmentID": 1220002
+    },
+    {
+      "id": 41220003,
+      "name": "粗麻衫",
+      "itemType": 6,
+      "quality": 2,
+      "equipmentID": 1220003
+    },
+    {
+      "id": 41220004,
+      "name": "僧侣道服",
+      "itemType": 6,
+      "quality": 2,
+      "equipmentID": 1220001
+    },
+    {
+      "id": 41220005,
+      "name": "原始树皮衣",
+      "itemType": 6,
+      "quality": 2,
+      "equipmentID": 1220001
+    },
+    {
+      "id": 41230001,
+      "name": "铁扳指",
+      "itemType": 6,
+      "quality": 2,
+      "equipmentID": 1230001
+    },
+    {
+      "id": 41230002,
+      "name": "骨牙石器",
+      "itemType": 6,
+      "quality": 2,
+      "equipmentID": 1230002
+    },
+    {
+      "id": 41230003,
+      "name": "橡果铃铛",
+      "itemType": 6,
+      "quality": 2,
+      "equipmentID": 1230003
+    },
+    {
+      "id": 41230004,
+      "name": "借火盏",
+      "itemType": 6,
+      "quality": 2,
+      "equipmentID": 1230004
+    },
+    {
+      "id": 41230005,
+      "name": "旧木盾",
+      "itemType": 6,
+      "quality": 2,
+      "equipmentID": 1230005
+    },
+    {
+      "id": 41310001,
+      "name": "守卫长矛",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1310001
+    },
+    {
+      "id": 41310002,
+      "name": "狩猎匕首",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1310002
+    },
+    {
+      "id": 41310003,
+      "name": "朝丰长矛",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1310003
+    },
+    {
+      "id": 41310004,
+      "name": "铁剑",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1310004
+    },
+    {
+      "id": 41310005,
+      "name": "青铜双斧",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1310005
+    },
+    {
+      "id": 41310006,
+      "name": "禁卫长戟",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1310006
+    },
+    {
+      "id": 41310007,
+      "name": "精制十字弩",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1310007
+    },
+    {
+      "id": 41310008,
+      "name": "漠地弯刀",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1310008
+    },
+    {
+      "id": 41310009,
+      "name": "佣兵铁锤",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1310009
+    },
+    {
+      "id": 41310010,
+      "name": "智者手杖",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1310010
+    },
+    {
+      "id": 41310011,
+      "name": "丛林信仰大剑",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1310011
+    },
+    {
+      "id": 41310012,
+      "name": "铁匠锻锤",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1310012
+    },
+    {
+      "id": 41310013,
+      "name": "工事铁锹",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1310013
+    },
+    {
+      "id": 41320001,
+      "name": "猎人装束",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1320001
+    },
+    {
+      "id": 41320002,
+      "name": "智者传颂长袍",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1320002
+    },
+    {
+      "id": 41320003,
+      "name": "漠地旅行风衣",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1320003
+    },
+    {
+      "id": 41320004,
+      "name": "侍卫锁甲",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1320004
+    },
+    {
+      "id": 41320005,
+      "name": "学者短衫",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1320005
+    },
+    {
+      "id": 41320006,
+      "name": "狩猎皮甲",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1320006
+    },
+    {
+      "id": 41320007,
+      "name": "朝丰自卫护甲",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1320007
+    },
+    {
+      "id": 41320008,
+      "name": "禁卫布甲",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1320008
+    },
+    {
+      "id": 41320009,
+      "name": "丛林厚袍",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1320009
+    },
+    {
+      "id": 41320010,
+      "name": "精铁肩甲",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1320010
+    },
+    {
+      "id": 41320011,
+      "name": "骑士甲胄",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1320011
+    },
+    {
+      "id": 41320012,
+      "name": "铁匠短衫",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1320012
+    },
+    {
+      "id": 41320013,
+      "name": "仿丘纽戍卫甲",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1320013
+    },
+    {
+      "id": 41330001,
+      "name": "狩猎皮靴",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1330001
+    },
+    {
+      "id": 41330002,
+      "name": "冒险家火把",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1330002
+    },
+    {
+      "id": 41330003,
+      "name": "铁匠烟斗",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1330003
+    },
+    {
+      "id": 41330004,
+      "name": "漠地头巾",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1330004
+    },
+    {
+      "id": 41330005,
+      "name": "禁卫头盔",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1330005
+    },
+    {
+      "id": 41330006,
+      "name": "丛林木盾",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1330006
+    },
+    {
+      "id": 41330007,
+      "name": "朝丰斗笠",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1330007
+    },
+    {
+      "id": 41330008,
+      "name": "智者炼金药瓶",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1330008
+    },
+    {
+      "id": 41410001,
+      "name": "海鸣战斧",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410001
+    },
+    {
+      "id": 41410002,
+      "name": "将军佩剑",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410002
+    },
+    {
+      "id": 41410003,
+      "name": "斗士暗金拳刃",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410003
+    },
+    {
+      "id": 41410004,
+      "name": "无畏利爪",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410004
+    },
+    {
+      "id": 41410005,
+      "name": "荒野骨棒",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410005
+    },
+    {
+      "id": 41410006,
+      "name": "黄衣旗帜",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410006
+    },
+    {
+      "id": 41410007,
+      "name": "棘刺弓",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410007
+    },
+    {
+      "id": 41410008,
+      "name": "大闷棍",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410008
+    },
+    {
+      "id": 41410009,
+      "name": "八十弦月夜花雾",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410009
+    },
+    {
+      "id": 41410010,
+      "name": "白光",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410010
+    },
+    {
+      "id": 41410011,
+      "name": "堕落铁链",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410011
+    },
+    {
+      "id": 41410012,
+      "name": "巴夏吹箭",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410012
+    },
+    {
+      "id": 41410013,
+      "name": "疾雷",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410013
+    },
+    {
+      "id": 41410014,
+      "name": "毒懒钩爪",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410014
+    },
+    {
+      "id": 41410015,
+      "name": "石中刺",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410015
+    },
+    {
+      "id": 41410016,
+      "name": "开信刀",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410016
+    },
+    {
+      "id": 41410017,
+      "name": "涅里斯锈锚",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410017
+    },
+    {
+      "id": 41410018,
+      "name": "斩龙",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410018
+    },
+    {
+      "id": 41410019,
+      "name": "寒岳",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410019
+    },
+    {
+      "id": 41410020,
+      "name": "鳞迟",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410020
+    },
+    {
+      "id": 41410021,
+      "name": "龙纹四玉戟",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410021
+    },
+    {
+      "id": 41410022,
+      "name": "无名",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410022
+    },
+    {
+      "id": 41410023,
+      "name": "极北寒牙",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410023
+    },
+    {
+      "id": 41410024,
+      "name": "沼守刀",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410024
+    },
+    {
+      "id": 41410025,
+      "name": "海民律刃",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410025
+    },
+    {
+      "id": 41410026,
+      "name": "谎言之弦",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410026
+    },
+    {
+      "id": 41410027,
+      "name": "龙吟",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1410027
+    },
+    {
+      "id": 41420001,
+      "name": "远征军胸甲",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420001
+    },
+    {
+      "id": 41420002,
+      "name": "商会锈金长袍",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420002
+    },
+    {
+      "id": 41420003,
+      "name": "纳塔维尔鳞甲",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420003
+    },
+    {
+      "id": 41420004,
+      "name": "倪卡科之护",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420004
+    },
+    {
+      "id": 41420005,
+      "name": "北境戍寒甲",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420005
+    },
+    {
+      "id": 41420006,
+      "name": "黄衣法袍",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420006
+    },
+    {
+      "id": 41420007,
+      "name": "古桑遗迹怪面",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420007
+    },
+    {
+      "id": 41420008,
+      "name": "武威",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420008
+    },
+    {
+      "id": 41420009,
+      "name": "绯红舞裙",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420009
+    },
+    {
+      "id": 41420010,
+      "name": "队长“板“甲",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420010
+    },
+    {
+      "id": 41420011,
+      "name": "浦劳贵族锁甲",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420011
+    },
+    {
+      "id": 41420012,
+      "name": "疣猪泥肩甲",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420012
+    },
+    {
+      "id": 41420013,
+      "name": "银铃花禁卫甲胄",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420013
+    },
+    {
+      "id": 41420014,
+      "name": "大鳖骨甲",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420014
+    },
+    {
+      "id": 41420015,
+      "name": "梅花蛮绣衣",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420015
+    },
+    {
+      "id": 41420016,
+      "name": "瘴血缚甲",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420016
+    },
+    {
+      "id": 41420017,
+      "name": "索罗轻甲",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420017
+    },
+    {
+      "id": 41420018,
+      "name": "长生木甲",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420018
+    },
+    {
+      "id": 41420019,
+      "name": "大角霜黎袍",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420019
+    },
+    {
+      "id": 41420020,
+      "name": "五纹朱色锦衣",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420020
+    },
+    {
+      "id": 41420021,
+      "name": "耐瘴二型",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420021
+    },
+    {
+      "id": 41420022,
+      "name": "断尾冠",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420022
+    },
+    {
+      "id": 41420023,
+      "name": "金冠",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420023
+    },
+    {
+      "id": 41420024,
+      "name": "银铃祝冠",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1420024
+    },
+    {
+      "id": 41430001,
+      "name": "金镂春信香囊",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430001
+    },
+    {
+      "id": 41430002,
+      "name": "雕玉弧月笛",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430002
+    },
+    {
+      "id": 41430003,
+      "name": "大世界法典",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430003
+    },
+    {
+      "id": 41430004,
+      "name": "吟游短笛",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430004
+    },
+    {
+      "id": 41430005,
+      "name": "奇色画板",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430005
+    },
+    {
+      "id": 41430006,
+      "name": "墨泪扳指",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430006
+    },
+    {
+      "id": 41430007,
+      "name": "航海望远镜",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430007
+    },
+    {
+      "id": 41430008,
+      "name": "名伶残羽",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430008
+    },
+    {
+      "id": 41430009,
+      "name": "学识眼镜",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430009
+    },
+    {
+      "id": 41430010,
+      "name": "箭翎皮帽",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430010
+    },
+    {
+      "id": 41430011,
+      "name": "誓约指环",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430011
+    },
+    {
+      "id": 41430012,
+      "name": "占卜项链",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430012
+    },
+    {
+      "id": 41430013,
+      "name": "巨蜥骨饰",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430013
+    },
+    {
+      "id": 41430014,
+      "name": "黄衣伪冠",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430014
+    },
+    {
+      "id": 41430015,
+      "name": "荆棘血果",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430015
+    },
+    {
+      "id": 41430016,
+      "name": "顽童皮帽",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430016
+    },
+    {
+      "id": 41430017,
+      "name": "新芽手环",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430017
+    },
+    {
+      "id": 41430018,
+      "name": "破岩石环",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430018
+    },
+    {
+      "id": 41430019,
+      "name": "霜绒银足衣",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430019
+    },
+    {
+      "id": 41430020,
+      "name": "百翎云肩",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430020
+    },
+    {
+      "id": 41430021,
+      "name": "蛮野口笼",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430021
+    },
+    {
+      "id": 41430022,
+      "name": "八神守珠",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430022
+    },
+    {
+      "id": 41430023,
+      "name": "毒虫护符",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430023
+    },
+    {
+      "id": 41430024,
+      "name": "铁匠秘录",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430024
+    },
+    {
+      "id": 41430025,
+      "name": "龙爪戒",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430025
+    },
+    {
+      "id": 41430026,
+      "name": "尾药珠",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430026
+    },
+    {
+      "id": 41430027,
+      "name": "精炉怀",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430027
+    },
+    {
+      "id": 41430028,
+      "name": "警世铃",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430028
+    },
+    {
+      "id": 41430029,
+      "name": "关山结",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430029
+    },
+    {
+      "id": 41430030,
+      "name": "龙裔佩",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430030
+    },
+    {
+      "id": 41430031,
+      "name": "金身布",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430031
+    },
+    {
+      "id": 41430032,
+      "name": "苇刃牙",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430032
+    },
+    {
+      "id": 41430033,
+      "name": "投矛索",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430033
+    },
+    {
+      "id": 41430034,
+      "name": "瘴窑珠",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430034
+    },
+    {
+      "id": 41430035,
+      "name": "沼心符",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430035
+    },
+    {
+      "id": 41430036,
+      "name": "神途",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430036
+    },
+    {
+      "id": 41430037,
+      "name": "油布",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1430037
+    },
+    {
+      "id": 41510001,
+      "name": "暴君",
+      "itemType": 6,
+      "quality": 5,
+      "equipmentID": 1510001
+    },
+    {
+      "id": 41510002,
+      "name": "光辉旅途",
+      "itemType": 6,
+      "quality": 5,
+      "equipmentID": 1510002
+    },
+    {
+      "id": 41510003,
+      "name": "西北望",
+      "itemType": 6,
+      "quality": 5,
+      "equipmentID": 1510003
+    },
+    {
+      "id": 41510004,
+      "name": "苦冬炉灯",
+      "itemType": 6,
+      "quality": 5,
+      "equipmentID": 1510004
+    },
+    {
+      "id": 41520001,
+      "name": "狮鬼铠",
+      "itemType": 6,
+      "quality": 5,
+      "equipmentID": 1520001
+    },
+    {
+      "id": 41520002,
+      "name": "柔光纱衣",
+      "itemType": 6,
+      "quality": 5,
+      "equipmentID": 1520002
+    },
+    {
+      "id": 41520003,
+      "name": "大鹫",
+      "itemType": 6,
+      "quality": 5,
+      "equipmentID": 1520003
+    },
+    {
+      "id": 41520004,
+      "name": "角途霸王甲",
+      "itemType": 6,
+      "quality": 5,
+      "equipmentID": 1520004
+    },
+    {
+      "id": 41530001,
+      "name": "维利亚舞鞋",
+      "itemType": 6,
+      "quality": 5,
+      "equipmentID": 1530001
+    },
+    {
+      "id": 41530002,
+      "name": "最初之血",
+      "itemType": 6,
+      "quality": 5,
+      "equipmentID": 1530002
+    },
+    {
+      "id": 41530003,
+      "name": "科摩多的箭袋",
+      "itemType": 6,
+      "quality": 5,
+      "equipmentID": 1530003
+    },
+    {
+      "id": 41530004,
+      "name": "王国庇佑",
+      "itemType": 6,
+      "quality": 5,
+      "equipmentID": 1530004
+    },
+    {
+      "id": 41530005,
+      "name": "倪卡科符戒",
+      "itemType": 6,
+      "quality": 5,
+      "equipmentID": 1530005
+    },
+    {
+      "id": 41530006,
+      "name": "瓶中海",
+      "itemType": 6,
+      "quality": 5,
+      "equipmentID": 1530006
+    },
+    {
+      "id": 41810001,
+      "name": "奇骏权杖",
+      "itemType": 6,
+      "quality": 5,
+      "equipmentID": 1810001
+    },
+    {
+      "id": 41820001,
+      "name": "鹅冠狐裘",
+      "itemType": 6,
+      "quality": 5,
+      "equipmentID": 1820001
+    },
+    {
+      "id": 41830001,
+      "name": "伏豹长号",
+      "itemType": 6,
+      "quality": 5,
+      "equipmentID": 1830001
+    },
+    {
+      "id": 41830002,
+      "name": "先行者",
+      "itemType": 6,
+      "quality": 5,
+      "equipmentID": 1830002
+    },
+    {
+      "id": 41910001,
+      "name": "“厨刀”",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1910001
+    },
+    {
+      "id": 41910002,
+      "name": "胜与负之骰",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1910002
+    },
+    {
+      "id": 41930001,
+      "name": "开饭了！",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 1930001
+    },
+    {
+      "id": 41930002,
+      "name": "大吉大利",
+      "itemType": 6,
+      "quality": 4,
+      "equipmentID": 1930002
+    },
+    {
+      "id": 49900001,
+      "name": "测试武器",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 4001
+    },
+    {
+      "id": 49900002,
+      "name": "测试铠甲",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 4002
+    },
+    {
+      "id": 49900003,
+      "name": "测试饰品",
+      "itemType": 6,
+      "quality": 3,
+      "equipmentID": 4003
+    },
+    {
+      "id": 60000000,
+      "name": "测试任务卷轴",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 80000001,
+      "name": "银色勋章",
+      "itemType": 4,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 80000002,
+      "name": "碎银",
+      "itemType": 5,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 80000003,
+      "name": "墨泪石",
+      "itemType": 5,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 80000004,
+      "name": "珍珠",
+      "itemType": 5,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 80000005,
+      "name": "丹晶石",
+      "itemType": 5,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 80000006,
+      "name": "符文陨晶",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 80000007,
+      "name": "强者之证",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 80000017,
+      "name": "精英之卷",
+      "itemType": 4,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 81000001,
+      "name": "“墨泪石”",
+      "itemType": 5,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 81001001,
+      "name": "定向抽奖硬币10",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 81001002,
+      "name": "定向抽奖硬币5",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 81001003,
+      "name": "定向抽奖角色30",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 81001004,
+      "name": "定向抽奖合金15",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 81001005,
+      "name": "定向抽奖合金10",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86000001,
+      "name": "传奇装备打磨宝箱",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86000002,
+      "name": "以旧换新锤炼宝箱",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86000003,
+      "name": "冒险启航宝箱",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86000004,
+      "name": "飞羽集结宝箱",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86000005,
+      "name": "巴夏集结宝箱",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86000006,
+      "name": "巨兽集结宝箱",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86000007,
+      "name": "史诗武装宝箱",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86000008,
+      "name": "史诗护甲宝箱",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86000009,
+      "name": "营地加速宝箱",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86000010,
+      "name": "新手冒险宝箱",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86000011,
+      "name": "飞鼠特惠宝箱",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86000012,
+      "name": "新春特惠宝箱",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86000013,
+      "name": "罗盘秘境宝箱-极",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86000014,
+      "name": "罗盘秘境宝箱-进",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 86001001,
+      "name": "紫装宝箱武器",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86001002,
+      "name": "紫装宝箱护甲",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86001003,
+      "name": "紫装宝箱饰品",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86001004,
+      "name": "旅途伙伴集结",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 86001005,
+      "name": "旅途伙伴集结",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 86001006,
+      "name": "旅途伙伴集结",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 86001007,
+      "name": "旅途伙伴集结",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 86001008,
+      "name": "旅途助力宝箱",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 86001009,
+      "name": "旅途助力宝箱",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 86001010,
+      "name": "旅途助力宝箱",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86001011,
+      "name": "悬赏银龙宝箱",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 86001012,
+      "name": "悬赏银龙宝箱",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 86001013,
+      "name": "悬赏合金宝箱",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 86001014,
+      "name": "悬赏银龙宝箱",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 86001015,
+      "name": "受邀好礼",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 86001016,
+      "name": "好友邀请2",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 86001017,
+      "name": "好友邀请3",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 86001018,
+      "name": "好友邀请4",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 86004001,
+      "name": "营地材料组合宝箱",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86004002,
+      "name": "抽卡限时礼包",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86660000,
+      "name": "第一个冒险宝箱",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 86660001,
+      "name": "第二个冒险宝箱",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 86660002,
+      "name": "第三个冒险宝箱",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86660003,
+      "name": "格朗商会的礼物",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 86660004,
+      "name": "新年宝箱1",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 86660005,
+      "name": "希金爷的赠礼",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 86660006,
+      "name": "希金爷的赠礼",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 86660007,
+      "name": "银龙宝箱",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 86660008,
+      "name": "银龙宝箱",
+      "itemType": 3,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 86660009,
+      "name": "希金爷的赠礼",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 86660010,
+      "name": "希金爷的赠礼",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 86660011,
+      "name": "希金爷的赠礼",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 86660012,
+      "name": "希金爷的赠礼",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 86660013,
+      "name": "希金爷的赠礼",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 86660014,
+      "name": "希金爷的赠礼",
+      "itemType": 3,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000001,
+      "name": "普通武器",
+      "itemType": 5,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000002,
+      "name": "普通护甲",
+      "itemType": 5,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000003,
+      "name": "优秀装备",
+      "itemType": 5,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000004,
+      "name": "优秀武器",
+      "itemType": 5,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000005,
+      "name": "优秀护甲",
+      "itemType": 5,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000006,
+      "name": "优秀饰品",
+      "itemType": 5,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000007,
+      "name": "精良武器",
+      "itemType": 5,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000008,
+      "name": "精良护甲",
+      "itemType": 5,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000009,
+      "name": "精良饰品",
+      "itemType": 5,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000010,
+      "name": "史诗武器",
+      "itemType": 5,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000011,
+      "name": "史诗护甲",
+      "itemType": 5,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000012,
+      "name": "史诗饰品",
+      "itemType": 5,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000013,
+      "name": "传奇武器",
+      "itemType": 5,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000014,
+      "name": "传奇护甲",
+      "itemType": 5,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000015,
+      "name": "传奇饰品",
+      "itemType": 5,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000016,
+      "name": "盗贼团的财宝",
+      "itemType": 5,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000017,
+      "name": "安尼姆的荣誉徽章",
+      "itemType": 0,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000018,
+      "name": "精良装备",
+      "itemType": 0,
+      "quality": 3,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000019,
+      "name": "史诗装备",
+      "itemType": 0,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000020,
+      "name": "传奇装备",
+      "itemType": 0,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000021,
+      "name": "安尼姆的荣誉徽章",
+      "itemType": 0,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000022,
+      "name": "安尼姆的荣誉徽章",
+      "itemType": 0,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000023,
+      "name": "各类财宝",
+      "itemType": 5,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000024,
+      "name": "安尼姆的荣誉徽章",
+      "itemType": 0,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000025,
+      "name": "装备祈福槽位",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000026,
+      "name": "密令经验",
+      "itemType": 5,
+      "quality": 2,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000027,
+      "name": "月光白狐",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000028,
+      "name": "秘境史诗装备",
+      "itemType": 0,
+      "quality": 4,
+      "equipmentID": 0
+    },
+    {
+      "id": 87000029,
+      "name": "祥瑞玉兔",
+      "itemType": 3,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 200000021,
+      "name": "任务限定烟雾弹",
+      "itemType": 3,
+      "quality": 1,
+      "equipmentID": 0
+    },
+    {
+      "id": 240000203,
+      "name": "传奇熔铸合金武器",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 240000204,
+      "name": "传奇熔铸合金护甲",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    },
+    {
+      "id": 240000205,
+      "name": "传奇熔铸合金饰品",
+      "itemType": 4,
+      "quality": 5,
+      "equipmentID": 0
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+.venv/
+venv/
+
+# 遊戲執行時產物，勿提交
+*.bak
+*.patched
+GameAssembly.dll*

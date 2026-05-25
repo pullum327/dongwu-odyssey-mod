@@ -1,0 +1,19 @@
+{
+  "ignite_no_consume": true,
+  "ignite_changming_triple": true,
+  "polish_max_level": true,
+  "polish_soul_siphon": true,
+  "enemy_hp_multiplier": true,
+  "gacha_xijin_pool": true,
+  "costume_default_models": true,
+  "equipment_1410009": true,
+  "equipment_1530001": true,
+  "equipment_1420017": true,
+  "equipment_1510003": true,
+  "equipment_1430003": true,
+  "equipment_1430013": true,
+  "equipment_1430021": true,
+  "equipment_1520002": true,
+  "equipment_1430008": true,
+  "equipment_effect_7400023": true
+}
