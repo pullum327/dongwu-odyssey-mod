@@ -1,109 +1,130 @@
 # 安尼姆Mod — 本機 Mod 修補
 
-修改 `GameAssembly.dll`（IL2CPP）與 `game_data.ab`（資料）。**請先完全關閉遊戲**再套用；Steam 更新遊戲後需重新執行套用。
-
-**GitHub 倉庫（完整 `_ignite_mod` 資料夾）：** https://github.com/pullum327/dongwu-odyssey-mod  
-**各 Mod 功能說明：** 見下方 [Mod 一覽](#mod-一覽)
+**GitHub：** https://github.com/pullum327/dongwu-odyssey-mod  
+**Releases（簡單安裝）：** https://github.com/pullum327/dongwu-odyssey-mod/releases
 
 ---
 
-## 從 GitHub 取得（首次安裝）
+## 簡單安裝（推薦，不需 Python）
 
-本倉庫 **就是** 整個 `_ignite_mod` 工具資料夾的內容（`apply_mods.py`、`mods/`、bat 等）。  
-其他人若遊戲目錄裡還沒有 `_ignite_mod`，請依下列方式下載，並放到遊戲根目錄。
+適合一般玩家：**下載 ZIP → 關遊戲 → 覆蓋檔案 → 開玩**。  
+不需安裝 Python、不需 `_ignite_mod` 工具資料夾。
 
-**遊戲根目錄範例：**
+> 若要自行開關 mod、改數值，請改看下方 [工具版安裝](#工具版安裝需-python) 與 [`CUSTOMIZATION.md`](CUSTOMIZATION.md)。
+
+### 1. 確認遊戲根目錄
+
+Steam 預設路徑（以下皆以此為例，若你改過 Steam 函式庫請自行對應）：
 
 ```
 C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\
 ```
 
-### 方式 A — Git 克隆（建議）
+### 2. 下載預修補包
 
-在 PowerShell 執行（**資料夾名稱必須是 `_ignite_mod`**）：
+到 [GitHub Releases](https://github.com/pullum327/dongwu-odyssey-mod/releases) 選一個 ZIP（Tag 尾碼 `rv1` 對應遊戲 `resourceVersion`，目前為 **rv1**）：
+
+| 下載 Tag | 說明 |
+|----------|------|
+| **`prebuilt-full-rv1`** | 全部 mod |
+| **`prebuilt-ignite-rv1`** | 僅火煉 mod |
+
+### 3. 關閉遊戲
+
+完全退出《東吳大冒險》，工作管理員中確認沒有 `AnimOdyssey.exe`。
+
+### 4. 覆蓋檔案（依 ZIP 內容）
+
+解壓 ZIP，將檔案**依相同相對路徑**覆蓋到遊戲根目錄。  
+完整目標路徑如下：
+
+#### 全 Mod 版（`prebuilt-full-rv1`）
+
+| ZIP 內檔案 | 覆蓋到此完整路徑 |
+|------------|------------------|
+| `GameAssembly.dll` | `C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\GameAssembly.dll` |
+| `AnimOdyssey_Data\StreamingAssets\Assets\game_data.ab` | `C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\AnimOdyssey_Data\StreamingAssets\Assets\game_data.ab` |
+| `AnimOdyssey_Data\StreamingAssets\asset_map.json` | `C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\AnimOdyssey_Data\StreamingAssets\asset_map.json` |
+| `AnimOdyssey_Data\StreamingAssets\strings.json` | `C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\AnimOdyssey_Data\StreamingAssets\strings.json` |
+| `AnimOdyssey_Data\StreamingAssets\Languages\zh-Hant\zh-Hant.json` | `C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\AnimOdyssey_Data\StreamingAssets\Languages\zh-Hant\zh-Hant.json` |
+| `AnimOdyssey_Data\StreamingAssets\Languages\zh-Hans\zh-Hans.json` | `C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\AnimOdyssey_Data\StreamingAssets\Languages\zh-Hans\zh-Hans.json` |
+| `AnimOdyssey_Data\StreamingAssets\Languages\en-US\en-US.json` | `C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\AnimOdyssey_Data\StreamingAssets\Languages\en-US\en-US.json` |
+
+#### 僅火煉版（`prebuilt-ignite-rv1`）
+
+| ZIP 內檔案 | 覆蓋到此完整路徑 |
+|------------|------------------|
+| `GameAssembly.dll` | `C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\GameAssembly.dll` |
+
+> 建議覆蓋前先備份將被替換的檔案。ZIP 內另有 `INSTALL.md` 可參考。
+
+### 5. 啟動遊戲
+
+重新開啟遊戲測試。各 mod 功能見 [Mod 一覽](#mod-一覽)。
+
+### 還原原版
+
+Steam 對遊戲按右鍵 → **內容** → **已安裝檔案** → **驗證檔案完整性**，或還原你自行備份的檔案。
+
+### 注意
+
+- **Steam 更新遊戲後**預修補包可能失效，需下載新版 Release 或改用 [工具版](#工具版安裝需-python)。
+- 修改遊戲檔案請自行承擔風險。
+
+---
+
+## 工具版安裝（需 Python）
+
+適合要**自訂 mod 開關**或**自行改數值**的使用者。需下載 `_ignite_mod` 工具資料夾並執行 `apply_mods.py`。
+
+**各 Mod 功能說明：** [Mod 一覽](#mod-一覽)  
+**自訂卡池／裝備／火煉等：** [`CUSTOMIZATION.md`](CUSTOMIZATION.md)
+
+### 取得 `_ignite_mod` 工具
+
+本倉庫 **就是** `_ignite_mod` 資料夾內容，必須放在遊戲根目錄下：
+
+```
+C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\_ignite_mod\
+```
+
+**Git 克隆（資料夾名稱必須是 `_ignite_mod`）：**
 
 ```powershell
 cd "C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey"
 git clone https://github.com/pullum327/dongwu-odyssey-mod.git _ignite_mod
 ```
 
-克隆完成後應出現：
+**或** GitHub → Code → Download ZIP → 解壓後重新命名為 `_ignite_mod` → 放到遊戲根目錄。
 
-```
-C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\_ignite_mod\apply_mods.py
-```
-
-> 若已克隆成 `dongwu-odyssey-mod` 等其他名稱，請將該資料夾**重新命名**為 `_ignite_mod`。
-
-### 方式 B — 下載 ZIP
-
-1. 開啟 https://github.com/pullum327/dongwu-odyssey-mod  
-2. 點 **Code → Download ZIP**  
-3. 解壓縮後，將資料夾重新命名為 **`_ignite_mod`**  
-4. 整個 `_ignite_mod` 資料夾移動到遊戲根目錄（與 `GameAssembly.dll` 同一層）
-
-### 方式 D — 預修補包 Releases（不需 Python）
-
-若不想安裝 Python，可到 [GitHub Releases](https://github.com/pullum327/dongwu-odyssey-mod/releases) 下載對應 **resourceVersion** 的 ZIP：
-
-| Tag | 內容 |
-|-----|------|
-| `prebuilt-full-rv1` | 全部 mod（DLL + game_data.ab + 語系） |
-| `prebuilt-ignite-rv1` | 僅火煉（只覆蓋 `GameAssembly.dll`） |
-
-解壓後依 ZIP 內 `INSTALL.md` 覆蓋到遊戲根目錄。**Steam 更新後可能失效**，需等新版本 Release 或改用具 `_ignite_mod` 工具自行套用。
-
----
-
-### 方式 C — 更新已有 `_ignite_mod`（工具版）
-
-若之前已克隆過，在 `_ignite_mod` 內執行：
+**更新工具：**
 
 ```powershell
 cd "C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\_ignite_mod"
 git pull
 ```
 
-取得資料夾後，繼續下方 [**套用 Mod 詳細步驟**](#套用-mod-詳細步驟)（安裝 Python 依賴 → 關遊戲 → 執行 bat）。
-
----
-
-## 安裝位置（必讀）
-
-本工具資料夾 `_ignite_mod` **必須放在遊戲根目錄下**，完整路徑如下：
-
-```
-C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\_ignite_mod\
-```
-
-對應的**遊戲根目錄**（命令列要先 `cd` 到這裡）：
+### 遊戲目錄結構
 
 ```
 C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\
-```
-
-Steam 預設安裝即為此位置。若你改過 Steam 函式庫路徑，請自行對應到實際的 `Dongwu Odyssey` 資料夾，但 `_ignite_mod` 一定要與 `GameAssembly.dll` **同一層**。
-
-正確結構：
-
-```
-C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\
-  GameAssembly.dll              ← 會被修補
+  GameAssembly.dll              ← 火煉 mod 會修補
   AnimOdyssey_Data\
     StreamingAssets\
-      Assets\game_data.ab       ← 會被修補
-  _ignite_mod\                  ← 本 mod 工具（必須在此）
+      Assets\game_data.ab       ← 資料 mod 會修補
+  _ignite_mod\                  ← 工具（必須在此）
     apply_mods.py
     mods_enabled.json
     套用全部Mod.bat
 ```
 
-> **常見錯誤：** 若已在 `_ignite_mod` 資料夾內，又執行 `python "_ignite_mod\apply_mods.py"`，路徑會變成 `_ignite_mod\_ignite_mod\...` 而找不到檔案。  
-> 命令列請先 `cd` 到**遊戲根目錄**，或直接在 `_ignite_mod` 內**雙擊 bat**（bat 會自動切到正確目錄）。
+> **常見錯誤：** 在 `_ignite_mod` 內又執行 `python "_ignite_mod\apply_mods.py"` 會找不到檔案。請 `cd` 到**遊戲根目錄**，或雙擊 bat。
 
 ---
 
-## 套用 Mod 詳細步驟
+## 套用 Mod 詳細步驟（工具版）
+
+**請先完全關閉遊戲**再套用；Steam 更新後需重新執行。
 
 ### 步驟 0：確認環境（首次使用）
 
@@ -114,7 +135,7 @@ C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\
 pip install pefile keystone-engine UnityPy
 ```
 
-3. 確認 `_ignite_mod` 已放在遊戲根目錄（見上方 [**安裝位置**](#安裝位置必讀)）：
+3. 確認 `_ignite_mod` 已放在 [遊戲根目錄](#工具版安裝需-python) 下：
 
 ```
 C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey\_ignite_mod\
