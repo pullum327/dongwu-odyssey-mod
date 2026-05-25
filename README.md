@@ -2,25 +2,11 @@
 
 修改 `GameAssembly.dll`（IL2CPP）與 `game_data.ab`（資料）。**請先完全關閉遊戲**再套用；Steam 更新遊戲後需重新執行套用。
 
-**GitHub 倉庫（完整 `_ignite_mod` 資料夾）：** https://github.com/pullum327/dongwu-odyssey-mod
+**GitHub 倉庫（完整 `_ignite_mod` 資料夾）：** https://github.com/pullum327/dongwu-odyssey-mod  
+**各 Mod 功能說明：** 見下方 [Mod 一覽](#mod-一覽)
 
 ---
-## Mod 一覽
 
-在 [`mods_enabled.json`](mods_enabled.json) 中設 `true` / `false` 開關各 mod。  
-執行 `python "_ignite_mod\apply_mods.py" --list` 可查看目前狀態。
-
-| 分類 | Mod ID | 修改目標 |
-|------|--------|----------|
-| 火煉 | `ignite_no_consume` | `GameAssembly.dll` |
-| 火煉 | `ignite_changming_triple` | `GameAssembly.dll` |
-| 打磨 | `polish_max_level` | `game_data.ab` |
-| 打磨 | `polish_soul_siphon` | `game_data.ab` + 語系文案 |
-| 詞條 | `effect_self_heal` | `game_data.ab` |
-| 怪物 | `enemy_hp_multiplier` | `game_data.ab` |
-| 卡池 | `gacha_xijin_pool` | `game_data.ab` |
-| 造型 | `costume_default_models` | `game_data.ab` + 語系文案 |
-| 裝備 | `equipment_XXXXXXX` | `game_data.ab`（部分含語系文案） |
 ## 從 GitHub 取得（首次安裝）
 
 本倉庫 **就是** 整個 `_ignite_mod` 工具資料夾的內容（`apply_mods.py`、`mods/`、bat 等）。  
@@ -68,22 +54,6 @@ git pull
 取得資料夾後，繼續下方 [**套用 Mod 詳細步驟**](#套用-mod-詳細步驟)（安裝 Python 依賴 → 關遊戲 → 執行 bat）。
 
 ---
-## Mod 一覽
-
-在 [`mods_enabled.json`](mods_enabled.json) 中設 `true` / `false` 開關各 mod。  
-執行 `python "_ignite_mod\apply_mods.py" --list` 可查看目前狀態。
-
-| 分類 | Mod ID | 修改目標 |
-|------|--------|----------|
-| 火煉 | `ignite_no_consume` | `GameAssembly.dll` |
-| 火煉 | `ignite_changming_triple` | `GameAssembly.dll` |
-| 打磨 | `polish_max_level` | `game_data.ab` |
-| 打磨 | `polish_soul_siphon` | `game_data.ab` + 語系文案 |
-| 詞條 | `effect_self_heal` | `game_data.ab` |
-| 怪物 | `enemy_hp_multiplier` | `game_data.ab` |
-| 卡池 | `gacha_xijin_pool` | `game_data.ab` |
-| 造型 | `costume_default_models` | `game_data.ab` + 語系文案 |
-| 裝備 | `equipment_XXXXXXX` | `game_data.ab`（部分含語系文案） |
 
 ## 安裝位置（必讀）
 
@@ -277,6 +247,36 @@ Copy-Item -Force "GameAssembly.dll.ignite_mod.bak" "GameAssembly.dll"
 
 ---
 
+## Mod 一覽
+
+在 [`mods_enabled.json`](mods_enabled.json) 中設 `true` / `false` 開關各 mod。
+
+```powershell
+cd "C:\Program Files (x86)\Steam\steamapps\common\Dongwu Odyssey"
+python "_ignite_mod\apply_mods.py" --list
+```
+
+下方為每個 mod 的**詳細功能**說明。可先從總表快速瀏覽，再往下看各 mod 細節。
+
+| 分類 | Mod ID | 功能概要 | 修改目標 |
+|------|--------|----------|----------|
+| 火煉 | `ignite_no_consume` | 火煉不扣材料／裝備，可空材料火煉 | `GameAssembly.dll` |
+| 火煉 | `ignite_changming_triple` | 必出 4 條長明，正面火種數值 ×3 | `GameAssembly.dll` |
+| 打磨 | `polish_max_level` | 所有打磨池詞條固定為該效果滿級 | `game_data.ab` |
+| 打磨 | `polish_soul_siphon` | 新增「靈魂虹吸」並加入全部打磨池 | `game_data.ab` + 語系文案 |
+| 詞條 | `effect_self_heal` | 全局「自愈」3 級：+12 生命、+10 瘴氣 | `game_data.ab` |
+| 怪物 | `enemy_hp_multiplier` | 強力怪物與 Boss 血量 ×2 | `game_data.ab` |
+| 卡池 | `gacha_xijin_pool` | 希金交易會只抽史詩，並調整池內裝備 | `game_data.ab` |
+| 造型 | `costume_default_models` | 2 名角色預設改為課金造型模型 | `game_data.ab` + 語系文案 |
+| 裝備 | `equipment_1410009` | 八十弦月夜花霧：高威力／暴擊／命中 | `game_data.ab` |
+| 裝備 | `equipment_1530001` | 維利亞舞鞋：速度／暴擊／全抗性 | `game_data.ab` |
+| 裝備 | `equipment_1420017` | 索羅輕甲：生命／閃避／抗性／速度 | `game_data.ab` |
+| 裝備 | `equipment_1510003` | 西北望 + 自定義神威詞條 | `game_data.ab` + 語系文案 |
+| 裝備 | `equipment_1430003` | 大世界法典：傷害向混合屬性 | `game_data.ab` |
+| 裝備 | `equipment_1430013` | 巨蜥骨飾：威力 + 最終傷害 | `game_data.ab` |
+| 裝備 | `equipment_1430021` | 蠻野口籠：威力 + 回合外傷害 | `game_data.ab` |
+| 裝備 | `equipment_1520002` | 柔光紗衣：生存 + 多個固有詞條 | `game_data.ab` |
+| 裝備 | `equipment_1430008` | 名伶殘羽：速度／治療／眩暈破抗 | `game_data.ab` |
 
 ---
 
