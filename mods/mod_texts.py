@@ -32,6 +32,45 @@ SHENWEI_TEXT_KEYS = {
     },
 }
 
+KAXINADE_TEXT_KEYS = {
+    "Item_name_41510099": {
+        "strings": "卡西纳德之剑",
+        "zh-Hant": "卡西納德之劍",
+        "zh-Hans": "卡西纳德之剑",
+        "en-US": "Kaxinade's Sword",
+    },
+    "Item_desc_41510099": {
+        "strings": "双螺旋刃，单体斩击再追一击",
+        "zh-Hant": "雙螺旋刃，單體斬擊再追一擊",
+        "zh-Hans": "双螺旋刃，单体斩击再追一击",
+        "en-US": "Twin spiral blades: single-target strikes deal a follow-up hit.",
+    },
+    "Equipment_describe_1510099": {
+        "strings": "双螺旋刃，单体斩击再追一击",
+        "zh-Hant": "雙螺旋刃，單體斬擊再追一擊",
+        "zh-Hans": "双螺旋刃，单体斩击再追一击",
+        "en-US": "Twin spiral blades: single-target strikes deal a follow-up hit.",
+    },
+    "EquipmentEffect_name_7599004": {
+        "strings": "螺旋追斩",
+        "zh-Hant": "螺旋追斬",
+        "zh-Hans": "螺旋追斩",
+        "en-US": "Spiral Pursuit",
+    },
+    "EquipmentEffect_describe_7599004": {
+        "strings": "单体攻击技能额外造成一击，伤害为原先的50%",
+        "zh-Hant": "單體攻擊技能額外造成一擊，傷害為原先的50%",
+        "zh-Hans": "单体攻击技能额外造成一击，伤害为原先的50%",
+        "en-US": "Single-target attack skills deal an extra hit at 50% damage",
+    },
+    "EquipmentEffect_contentLv1_7599004": {
+        "strings": "单体攻击技能额外造成一击，伤害为原先的<param2[0].p>",
+        "zh-Hant": "單體攻擊技能額外造成一擊，傷害為原先的<param2[0].p>",
+        "zh-Hans": "单体攻击技能额外造成一击，伤害为原先的<param2[0].p>",
+        "en-US": "Single-target attacks deal an extra hit at <param2[0].p> damage",
+    },
+}
+
 SOUL_SIPHON_TEXT_KEYS = {
     "EquipmentEffect_name_7599003": {
         "strings": "灵魂虹吸",
@@ -112,6 +151,12 @@ def apply_soul_siphon_texts() -> None:
     changed = apply_text_keys(SOUL_SIPHON_TEXT_KEYS)
     if changed:
         print(f"  [ok]   text_soul_siphon UI 文案 {changed} 項")
+
+
+def apply_kaxinade_texts() -> None:
+    changed = apply_text_keys(KAXINADE_TEXT_KEYS)
+    if changed:
+        print(f"  [ok]   text_kaxinade UI 文案 {changed} 項")
 
 
 COSTUME_TEXT_BY_FILE: tuple[tuple[Path, Mapping[str, str]], ...] = (

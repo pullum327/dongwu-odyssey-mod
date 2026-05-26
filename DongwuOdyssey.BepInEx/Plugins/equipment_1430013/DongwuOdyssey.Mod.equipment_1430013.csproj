@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>DongwuOdyssey.Mod.equipment_1430013</AssemblyName>
+    <RootNamespace>DongwuOdyssey.Mod.equipment_1430013</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ModCore\DongwuOdyssey.ModCore.csproj" />
+    <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.735" />
+    <PackageReference Include="BepInEx.PluginInfoProps" Version="2.1.0" />
+  </ItemGroup>
+</Project>

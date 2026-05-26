@@ -1,0 +1,8 @@
+bin/
+obj/
+Plugins/**/bin/
+Plugins/**/obj/
+HarmonyLib/bin/
+HarmonyLib/obj/
+ModCore/bin/
+ModCore/obj/

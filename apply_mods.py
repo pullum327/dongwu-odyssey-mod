@@ -1,32 +1,44 @@
 #!/usr/bin/env python3
-"""依 mods_enabled.json 選擇性套用 Mod（需先關閉遊戲）。
+"""建置 game_data / 語系 mod（開發用）。
+
+玩家安裝請改用 BepInEx 多插件：DongwuOdyssey.BepInEx/build_all.ps1 -Deploy
 
 用法：
-  python apply_mods.py              # 依 mods_enabled.json 套用
+  python apply_mods.py              # 寫入遊戲目錄（開發／建包用）
   python apply_mods.py --list       # 列出所有 mod
-  python apply_mods.py --only ignite_no_consume,enemy_hp_multiplier
-  python apply_mods.py --enable polish_soul_siphon --disable gacha_xijin_pool
-  python apply_mods.py --restore    # 還原 DLL 與 game_data.ab
+  python apply_mods.py --restore    # 還原 game_data.ab
 """
 from __future__ import annotations
 
 import argparse
 import json
-import shutil
 import sys
 from pathlib import Path
 
-import pefile
-
 from game_data import restore_game_data_from_backup
 from mod_registry import ALL_MODS, DEFAULT_ENABLED, MOD_BY_ID, STRING_MODS
-from patch_common import DLL, sha256, write_dll
+from patch_common import GAME_ROOT
 from mods.mod_texts import apply_costume_texts, restore_costume_texts
 
 ROOT = Path(__file__).resolve().parent
-GAME_ROOT = ROOT.parent
-BACKUP = GAME_ROOT / "GameAssembly.dll.ignite_mod.bak"
 ENABLED_PATH = ROOT / "mods_enabled.json"
+
+BEPINEX_IGNITE_KEYS = ("ignite_no_consume", "ignite_changming_triple")
+
+
+def _warn_if_bepinex_ignite_keys(enabled: dict[str, bool]) -> None:
+    on = [k for k in BEPINEX_IGNITE_KEYS if enabled.get(k)]
+    if not on:
+        return
+    plugins = GAME_ROOT / "BepInEx" / "plugins"
+    found = [k for k in on if (plugins / k).is_dir()]
+    print("\n=== 火煉（BepInEx）===")
+    print(f"  mods_enabled 已啟用: {', '.join(on)}")
+    if found:
+        print(f"  已安裝插件資料夾: {', '.join(found)}")
+    else:
+        print("  [warn] BepInEx/plugins 內尚無對應 mod 資料夾，請見 DongwuOdyssey.BepInEx/README.md")
+    print("  火煉功能現在由 BepInEx Harmony 插件提供。")
 
 
 def load_enabled_config() -> dict[str, bool]:
@@ -100,12 +112,13 @@ def print_mod_list(enabled: dict[str, bool]) -> None:
 
 
 def restore_all() -> None:
-    if not BACKUP.exists():
-        raise SystemExit(f"沒有備份 {BACKUP}")
-    shutil.copy2(BACKUP, DLL)
+    print(
+        "  [warn] 若剛完成 Steam 遊戲更新，舊備份可能不相容；"
+        "必要時請用 Steam 驗證完整性還原原版資料。"
+    )
     restore_costume_texts()
     restore_game_data_from_backup()
-    print(f"已還原 {DLL} 與 game_data.ab")
+    print("已還原資料 mod 檔案")
 
 
 def apply_enabled_mods(enabled: dict[str, bool]) -> None:
@@ -114,26 +127,9 @@ def apply_enabled_mods(enabled: dict[str, bool]) -> None:
         print("沒有啟用任何 mod。")
         return
 
-    dll_mods = [m for m in active if m.kind == "dll"]
     data_mods = [m for m in active if m.kind == "game_data"]
 
-    if dll_mods:
-        if not DLL.exists():
-            raise SystemExit(f"找不到 {DLL}")
-        if not BACKUP.exists():
-            shutil.copy2(DLL, BACKUP)
-            print(f"已建立備份: {BACKUP}")
-
-        pe = pefile.PE(str(BACKUP))
-        data = bytearray(BACKUP.read_bytes())
-        backup_bytes = bytes(BACKUP.read_bytes())
-        print(f"\n修補前 SHA256（備份）: {sha256(BACKUP)}")
-
-        for mod in dll_mods:
-            print(f"=== {mod.category} / {mod.name} ===")
-            mod.apply(pe, data, backup_bytes)
-
-        write_dll(data, BACKUP)
+    _warn_if_bepinex_ignite_keys(enabled)
 
     if data_mods:
         from game_data import GameDataSession
@@ -152,9 +148,8 @@ def apply_enabled_mods(enabled: dict[str, bool]) -> None:
             print(f"--- 文案 / {mod.name} ---")
             string_apply()
 
-    print("\n完成。請重啟遊戲後測試。")
-    if dll_mods:
-        print("若寫入失敗，請關閉遊戲後將 GameAssembly.dll.patched 覆蓋為 GameAssembly.dll")
+    print("\n完成（開發用寫入）。")
+    print("正式玩家包請使用已建置好的 BepInEx 插件與資料檔，不要求玩家安裝 Python。")
 
 
 def main(argv: list[str] | None = None) -> None:

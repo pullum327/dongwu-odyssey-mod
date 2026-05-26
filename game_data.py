@@ -31,9 +31,24 @@ def patch_unity_version_parser() -> None:
     UnityVersion.from_str = classmethod(from_str)
 
 
+def _backup_is_stale() -> bool:
+    if not GAME_DATA_BACKUP.exists() or not GAME_DATA_AB.exists():
+        return False
+    live_size = GAME_DATA_AB.stat().st_size
+    backup_size = GAME_DATA_BACKUP.stat().st_size
+    # 遊戲大更新後 bundle 體積常差數倍；沿用舊備份會寫壞檔案
+    return live_size > backup_size * 2 or backup_size > live_size * 2
+
+
 def ensure_game_data_backup() -> None:
     if not GAME_DATA_AB.exists():
         raise SystemExit(f"找不到 {GAME_DATA_AB}")
+    if GAME_DATA_BACKUP.exists() and _backup_is_stale():
+        GAME_DATA_BACKUP.unlink()
+        print(
+            "  [warn] 偵測到遊戲已更新（game_data.ab 與備份大小不符），"
+            "已刪除舊備份並從目前遊戲檔重建"
+        )
     if not GAME_DATA_BACKUP.exists():
         shutil.copy2(GAME_DATA_AB, GAME_DATA_BACKUP)
         print(f"  [backup] {GAME_DATA_BACKUP.name}")
@@ -45,6 +60,13 @@ def restore_game_data_from_backup() -> None:
     shutil.copy2(GAME_DATA_BACKUP, GAME_DATA_AB)
     if ASSET_MAP_BACKUP.exists():
         shutil.copy2(ASSET_MAP_BACKUP, ASSET_MAP)
+
+    try:
+        from mods.spriteatlas_patch import restore_spriteatlas_from_backup
+
+        restore_spriteatlas_from_backup()
+    except ImportError:
+        pass
 
 
 class GameDataSession:

@@ -108,15 +108,22 @@ def apply_polish_soul_siphon(session: GameDataSession) -> None:
         "priority": 0,
     }
 
+    skip_pool_ids = {51001}
     pools_added = 0
     for pool in pools.values():
+        pid = int(pool.get("poolID", -1))
+        if pid in skip_pool_ids:
+            continue
         effects_list = pool.get("effect", [])
         if SOUL_SIPHON_EFFECT_REF not in effects_list:
             effects_list.append(SOUL_SIPHON_EFFECT_REF)
             pool["effect"] = effects_list
             pools_added += 1
 
-    print(f"  [ok]   polish_soul_siphon 靈魂虹吸加入 {pools_added} 個打磨池")
+    print(
+        f"  [ok]   polish_soul_siphon 靈魂虹吸加入 {pools_added} 個打磨池"
+        "（略過 51001 傳奇通用池）"
+    )
 
 
 def _rewrite_effect_level(raw: str, level_limits: dict[int, int]) -> tuple[str, bool]:

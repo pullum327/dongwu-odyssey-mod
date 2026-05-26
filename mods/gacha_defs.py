@@ -39,6 +39,7 @@ XIJIN_REMOVED_EPIC_ITEMS: dict[int, str] = {
     41430010: "箭翎皮帽",
     41430015: "荊棘血果",
     41430025: "龍爪戒",
+    41510099: "卡西娜德之劍",
 }
 
 GACHA_POOL_ASSET = "assets/gamedata/gachapool.json"

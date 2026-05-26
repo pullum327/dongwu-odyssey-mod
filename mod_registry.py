@@ -4,8 +4,6 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Callable, Literal
 
-import pefile
-
 from game_data import GameDataSession
 from mods.costume_defs import apply_costume_default_models
 from mods.enemy_defs import apply_enemy_hp_multiplier
@@ -21,13 +19,21 @@ from mods.equipment_defs import (
     apply_equipment_xibeiwang,
     apply_equipment_yaso_moonflower,
 )
+from mods.equipment_kaxinade_defs import apply_equipment_kaxinade
 from mods.equipment_rules_defs import apply_equipment_quality5_rules
 from mods.gacha_defs import apply_gacha_xijin_pool
-from mods.mod_texts import apply_costume_texts, apply_shenwei_texts, apply_soul_siphon_texts
+from mods.mod_texts import (
+    apply_costume_texts,
+    apply_kaxinade_texts,
+    apply_shenwei_texts,
+    apply_soul_siphon_texts,
+)
+from mods.ignite_data_defs import apply_ignite_changming_data
 from mods.polish_defs import apply_polish_max_level, apply_polish_soul_siphon
-from patch_ignite import apply_ignite_changming_triple, apply_ignite_no_consume
+ModKind = Literal["game_data", "strings"]
 
-ModKind = Literal["dll", "game_data", "strings"]
+# 玩家安裝：BepInEx 多插件 DongwuOdyssey.BepInEx/（Harmony + 已建置資料檔）。
+# 本目錄 apply_mods.py 只供開發/建包階段合併資料；玩家端不執行 Python。
 
 
 @dataclass(frozen=True)
@@ -39,28 +45,13 @@ class ModSpec:
     apply: Callable[..., None]
 
 
-def _apply_ignite_no_consume(pe: pefile.PE, data: bytearray, backup: bytes) -> None:
-    apply_ignite_no_consume(pe, data, backup)
-
-
-def _apply_ignite_changming(pe: pefile.PE, data: bytearray, backup: bytes) -> None:
-    apply_ignite_changming_triple(pe, data, backup)
-
-
 ALL_MODS: tuple[ModSpec, ...] = (
     ModSpec(
-        "ignite_no_consume",
-        "火煉不消耗材料",
+        "ignite_changming_data",
+        "火煉長明（資料層僅長明權重）",
         "火煉",
-        "dll",
-        _apply_ignite_no_consume,
-    ),
-    ModSpec(
-        "ignite_changming_triple",
-        "火煉長明 ×3 數值",
-        "火煉",
-        "dll",
-        _apply_ignite_changming,
+        "game_data",
+        apply_ignite_changming_data,
     ),
     ModSpec(
         "polish_max_level",
@@ -140,6 +131,13 @@ ALL_MODS: tuple[ModSpec, ...] = (
         apply_equipment_xibeiwang,
     ),
     ModSpec(
+        "equipment_1510099",
+        "卡西娜德之劍",
+        "裝備",
+        "game_data",
+        apply_equipment_kaxinade,
+    ),
+    ModSpec(
         "equipment_1430003",
         "大世界法典",
         "裝備",
@@ -181,6 +179,7 @@ MOD_BY_ID = {mod.id: mod for mod in ALL_MODS}
 # 文案 mod（跟著對應 game_data mod 自動套用）
 STRING_MODS: dict[str, Callable[[], None]] = {
     "equipment_1510003": apply_shenwei_texts,
+    "equipment_1510099": apply_kaxinade_texts,
     "polish_soul_siphon": apply_soul_siphon_texts,
     "costume_default_models": apply_costume_texts,
 }

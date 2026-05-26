@@ -10,5 +10,9 @@ venv/
 *.patched
 GameAssembly.dll*
 
-# 預修補 Release 建包輸出
+# 建包輸出
 dist/
+
+# BepInEx 建置產物
+DongwuOdyssey.BepInEx/**/bin/
+DongwuOdyssey.BepInEx/**/obj/
