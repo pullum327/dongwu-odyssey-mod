@@ -1,4 +1,4 @@
-# 東吳大冒險 Mod（`_ignite_mod` + BepInEx）
+# 安尼姆 Mod（`_ignite_mod` + BepInEx）
 
 **GitHub：** https://github.com/pullum327/dongwu-odyssey-mod  
 
