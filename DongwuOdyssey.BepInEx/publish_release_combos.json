@@ -1,0 +1,88 @@
+{
+  "combos": [
+    {
+      "id": "all",
+      "title": "BepInEx All Mods",
+      "notesFile": "release_notes/bepinex-all.md",
+      "pluginFolders": [
+        "dongwu_data_core",
+        "ignite_no_consume",
+        "ignite_changming_triple",
+        "ignite_changming_data",
+        "polish_max_level",
+        "polish_soul_siphon",
+        "effect_self_heal",
+        "equipment_quality5_rules",
+        "enemy_hp_multiplier",
+        "gacha_xijin_pool",
+        "costume_default_models",
+        "equipment_1410009",
+        "equipment_1530001",
+        "equipment_1420017",
+        "equipment_1510003",
+        "equipment_1510099",
+        "equipment_1430003",
+        "equipment_1430013",
+        "equipment_1430021",
+        "equipment_1520002",
+        "equipment_1430008"
+      ],
+      "dataOnly": [
+        "ignite_changming_data",
+        "polish_max_level",
+        "polish_soul_siphon",
+        "effect_self_heal",
+        "equipment_quality5_rules",
+        "enemy_hp_multiplier",
+        "gacha_xijin_pool",
+        "costume_default_models",
+        "equipment_1410009",
+        "equipment_1530001",
+        "equipment_1420017",
+        "equipment_1510003",
+        "equipment_1510099",
+        "equipment_1430003",
+        "equipment_1430013",
+        "equipment_1430021",
+        "equipment_1520002",
+        "equipment_1430008"
+      ]
+    },
+    {
+      "id": "ignite-polish-gacha-costume",
+      "title": "BepInEx Ignite+Polish+Legend+Gacha+Costume",
+      "notesFile": "release_notes/bepinex-ignite-polish-gacha-costume.md",
+      "pluginFolders": [
+        "dongwu_data_core",
+        "ignite_no_consume",
+        "ignite_changming_triple",
+        "ignite_changming_data",
+        "polish_max_level",
+        "polish_soul_siphon",
+        "equipment_quality5_rules",
+        "gacha_xijin_pool",
+        "costume_default_models"
+      ],
+      "dataOnly": [
+        "ignite_changming_data",
+        "polish_max_level",
+        "polish_soul_siphon",
+        "equipment_quality5_rules",
+        "gacha_xijin_pool",
+        "costume_default_models"
+      ]
+    },
+    {
+      "id": "costume-only",
+      "title": "BepInEx Costume Only",
+      "notesFile": "release_notes/bepinex-costume-only.md",
+      "pluginFolders": [
+        "dongwu_data_core",
+        "costume_default_models"
+      ],
+      "dataOnly": [
+        "costume_default_models"
+      ]
+    }
+  ]
+}
