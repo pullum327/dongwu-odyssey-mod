@@ -22,8 +22,11 @@ KAXINADE_ITEM_ID = 41510099
 LEGENDARY_WEAPON_POLISH_POOL_ID = 51001
 
 SPIRAL_STRIKE_EFFECT_ID = 7599004
-# 開戰施加 buff（複製 10009）；裝備直掛 1104 無效，沿用 743802_GetBuff 傳 buffId
-SPIRAL_STRIKE_BUFF_ID = 7599010
+# 開戰標記（供裝備 GetBuff 與 Harmony 判定）
+SPIRAL_MARK_BUFF_ID = 7599010
+# 再動期間自身傷害 -50%（複製 800083 + 600002）
+SPIRAL_WEAKEN_BUFF_ID = 7599011
+SPIRAL_WEAKEN_MODULE_ID = 7599014
 SPIRAL_GET_BUFF_MODULE_ID = 7599043
 SPIRAL_GET_BUFF_FLOW = "743802_GetBuff"
 
@@ -39,7 +42,7 @@ def apply_equipment_kaxinade(session: GameDataSession) -> None:
         apply_polish_soul_siphon(session)
         effects = session.json(EFFECT_ASSET)
 
-    _apply_spiral_strike_buff(session)
+    _apply_spiral_strike_buffs(session)
     _apply_spiral_strike_effect(session)
     _apply_kaxinade_polish_pool(session)
     _apply_kaxinade_equipment(session)
@@ -48,18 +51,54 @@ def apply_equipment_kaxinade(session: GameDataSession) -> None:
     print(f"  [ok]   equipment_{KAXINADE_EQUIPMENT_ID} 卡西娜德之劍（傳奇武器）")
 
 
-def _apply_spiral_strike_buff(session: GameDataSession) -> None:
-    """複製 buff 10009（追加攻擊），由裝備詞條在回合開始施加。"""
+def _apply_spiral_strike_buffs(session: GameDataSession) -> None:
+    """開戰標記 buff + 再動期間自傷減半 debuff（Harmony 於單體傷害技結束時施加）。"""
     buffs = session.json(BUFF_ASSET)
     modules = session.json(MODULE_ASSET)
-    ref = buffs.get("10009")
-    if ref is None:
-        raise SystemExit("找不到參考 buff 10009")
-    buffs[str(SPIRAL_STRIKE_BUFF_ID)] = {
-        **ref,
-        "id": SPIRAL_STRIKE_BUFF_ID,
+
+    weaken_ref = buffs.get("800083")
+    weaken_mod_ref = modules.get("600002")
+    if weaken_ref is None or weaken_mod_ref is None:
+        raise SystemExit("找不到參考 buff 800083 / module 600002（傷害修正）")
+
+    buffs[str(SPIRAL_MARK_BUFF_ID)] = {
+        "id": SPIRAL_MARK_BUFF_ID,
+        "type": 7,
+        "spendTiming": 1,
+        "clearTiming": [1],
+        "ReResist": 0,
+        "module": [],
+        "param1": [],
+        "param2": [],
+        "layer": 0,
+        "template": 0,
         "round": 99,
+        "category": 9,
+        "des": "",
+        "icon": "",
+        "durationEffect": "",
+        "effectType": -1,
+        "prefab": "",
+        "resistPrefab": "",
+        "specialName": "",
     }
+
+    buffs[str(SPIRAL_WEAKEN_BUFF_ID)] = {
+        **weaken_ref,
+        "id": SPIRAL_WEAKEN_BUFF_ID,
+        "round": 1,
+        "module": [SPIRAL_WEAKEN_MODULE_ID],
+        "param1": ["-0.5"],
+        "param2": [],
+        "clearTiming": [4],
+        "category": 1,
+    }
+
+    modules[str(SPIRAL_WEAKEN_MODULE_ID)] = {
+        **weaken_mod_ref,
+        "id": SPIRAL_WEAKEN_MODULE_ID,
+    }
+
     modules[str(SPIRAL_GET_BUFF_MODULE_ID)] = {
         "id": SPIRAL_GET_BUFF_MODULE_ID,
         "condition": 8,
@@ -81,13 +120,13 @@ def _apply_spiral_strike_effect(session: GameDataSession) -> None:
     effects[str(SPIRAL_STRIKE_EFFECT_ID)] = {
         "id": SPIRAL_STRIKE_EFFECT_ID,
         "name": "螺旋追斬",
-        "describe": "單體攻擊技能額外造成一擊，傷害為原先的50%",
+        "describe": "單體傷害技能後可再動一次，再動期間自身傷害降低50%",
         "levelLimit": 1,
         "showInFilter": 1,
         "Lv1ModuleID": [SPIRAL_GET_BUFF_MODULE_ID],
-        "Lv1Param1": [str(SPIRAL_STRIKE_BUFF_ID)],
+        "Lv1Param1": [str(SPIRAL_MARK_BUFF_ID)],
         "Lv1Param2": [],
-        "contentLv1": "單體攻擊技能額外造成一擊，傷害為原先的50%",
+        "contentLv1": "單體傷害技能後可再動一次，再動期間自身傷害降低50%",
         "Lv2ModuleID": [],
         "Lv2Param1": [],
         "Lv2Param2": [],
@@ -130,7 +169,7 @@ def _apply_kaxinade_equipment(session: GameDataSession) -> None:
     equipment = session.json(EQUIPMENT_ASSET)
     equipment[str(KAXINADE_EQUIPMENT_ID)] = {
         "id": KAXINADE_EQUIPMENT_ID,
-        "describe": "雙螺旋刃，單體斬擊再追一擊",
+        "describe": "雙螺旋刃，單體斬擊後可再動",
         "quality": 5,
         "equipmentPart": 1,
         "effectID": [
@@ -166,7 +205,7 @@ def _apply_kaxinade_item(session: GameDataSession) -> None:
     items[str(KAXINADE_ITEM_ID)] = {
         "id": KAXINADE_ITEM_ID,
         "name": "卡西娜德之劍",
-        "desc": "雙螺旋刃，單體斬擊再追一擊",
+        "desc": "雙螺旋刃，單體斬擊後可再動",
         "value": 0,
         "rewardPool": [],
         "weight": 0,

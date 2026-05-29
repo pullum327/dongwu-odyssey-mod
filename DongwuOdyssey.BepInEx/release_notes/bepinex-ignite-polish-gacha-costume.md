@@ -1,11 +1,19 @@
-## 火煉 + 打磨 + 傳奇規則 + 卡池 + 造型
+## 火煉 + 打磨 + 傳奇規則 + 希金卡池 + 預設造型
 
-| 類型 | 內容 |
-|------|------|
-| Harmony | 火煉不扣材料、長明詞條×3 |
-| 資料 | 長明權重、打磨滿級、靈魂虹吸、傳奇多件/可火煉、希金卡池、預設造型 |
+### 安裝（玩家，不需 Python）
 
-### 安裝
-同全套：BepInEx → plugins → patched-data（本包資料檔**僅含上述 mod**）。
+1. 關閉遊戲
+2. 解壓 BepInEx zip 到遊戲根目錄
+3. 解壓 `dongwu-bepinex-plugins.zip` → `BepInEx\plugins\`
+4. 解壓 `dongwu-patched-data.zip` → `AnimOdyssey_Data\StreamingAssets\`
+5. 啟動遊戲
 
-移除某插件資料夾不會關閉資料效果；要換組合請下載對應 Release。
+勿與其他 Release 的 patched-data 混用。
+
+### Steam 遊戲更新後
+
+重新套用**本 Release** 的 `dongwu-patched-data.zip`（或下載同 rv 的新 Release）。詳見 `_ignite_mod/README.md`「Steam 遊戲更新後」。
+
+### 開發者建置（可選）
+
+解壓 `dongwu-mod-build-source.zip` 到遊戲根目錄後，於 `DongwuOdyssey.BepInEx` 執行 `.\build_all.ps1 -Deploy`（需 .NET 6、Python + UnityPy）。

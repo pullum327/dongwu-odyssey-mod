@@ -11,6 +11,15 @@ function Write-Utf8Bom($path, $text) {
     [System.IO.File]::WriteAllText($path, $text, $utf8Bom)
 }
 
+function Get-HarmonyApplyLine($patchName) {
+    switch ($patchName) {
+        "NoConsume" { return "IgniteNoConsumePatches.Apply(harmony, Log);" }
+        "Changming" { return "IgniteChangmingPatches.Apply(harmony, Log);" }
+        "Spiral" { return "KaxinadeSpiralStrikePatches.Apply(harmony, Log);" }
+        default { throw "Unknown harmony patch: $patchName" }
+    }
+}
+
 New-Item -ItemType Directory -Force -Path $PluginsRoot | Out-Null
 
 function Write-DataCoreProject() {
@@ -67,13 +76,48 @@ foreach ($p in $json) {
     $guid = "pullum.dongwu.$id"
     $displayName = "Dongwu: $($p.name)"
 
+    $harmonyPatch = $null
     if ($p.kind -eq "harmony") {
-        $applyLine = if ($p.patch -eq "NoConsume") {
-            "IgniteNoConsumePatches.Apply(harmony, Log);"
-        } else {
-            "IgniteChangmingPatches.Apply(harmony, Log);"
+        $harmonyPatch = $p.patch
+    } elseif ($p.harmony) {
+        $harmonyPatch = $p.harmony
+    }
+
+    if ($harmonyPatch) {
+        $applyLine = Get-HarmonyApplyLine $harmonyPatch
+        if ($p.kind -eq "data") {
+            $pluginCs = @"
+using System;
+using BepInEx;
+using BepInEx.Unity.IL2CPP;
+using DongwuOdyssey.HarmonyLib;
+using DongwuOdyssey.ModCore;
+using HarmonyLib;
+
+namespace $asm;
+
+[BepInPlugin("$guid", "$displayName", "1.0.0")]
+public class Plugin : BasePlugin
+{
+    public override void Load()
+    {
+        ComposableDataMods.ApplyInstalledDataMods(Log);
+        var harmony = new Harmony("$guid");
+        try
+        {
+            $applyLine
         }
-        $pluginCs = @"
+        catch (Exception ex)
+        {
+            Log.LogError($"Harmony load failed (game continues): {ex}");
+        }
+
+        Log.LogInfo("$displayName loaded");
+    }
+}
+"@
+        } else {
+            $pluginCs = @"
 using BepInEx;
 using BepInEx.Unity.IL2CPP;
 using DongwuOdyssey.HarmonyLib;
@@ -92,6 +136,7 @@ public class Plugin : BasePlugin
     }
 }
 "@
+        }
         $refs = @"
   <ItemGroup>
     <ProjectReference Include="..\..\ModCore\DongwuOdyssey.ModCore.csproj" />

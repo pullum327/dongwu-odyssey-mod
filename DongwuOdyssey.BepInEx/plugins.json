@@ -13,7 +13,7 @@
   { "id": "equipment_1530001", "name": "維利亞舞鞋", "kind": "data" },
   { "id": "equipment_1420017", "name": "索羅輕甲", "kind": "data" },
   { "id": "equipment_1510003", "name": "西北望", "kind": "data", "alsoStrings": true },
-  { "id": "equipment_1510099", "name": "卡西娜德之劍", "kind": "data", "alsoStrings": true },
+  { "id": "equipment_1510099", "name": "卡西娜德之劍", "kind": "data", "alsoStrings": true, "harmony": "Spiral" },
   { "id": "equipment_1430003", "name": "大世界法典", "kind": "data" },
   { "id": "equipment_1430013", "name": "巨蜥骨飾", "kind": "data" },
   { "id": "equipment_1430021", "name": "蠻野口籠", "kind": "data" },

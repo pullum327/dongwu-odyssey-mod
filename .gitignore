@@ -13,6 +13,10 @@ GameAssembly.dll*
 # 建包輸出
 dist/
 
+# 本地除錯腳本（非發佈必要）
+export_spiral_skills.py
+spiral_strike_skill_candidates.json
+
 # BepInEx 建置產物
 DongwuOdyssey.BepInEx/**/bin/
 DongwuOdyssey.BepInEx/**/obj/

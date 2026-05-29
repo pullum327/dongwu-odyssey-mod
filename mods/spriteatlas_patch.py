@@ -47,10 +47,18 @@ def ensure_spriteatlas_backup() -> None:
 
 
 def restore_spriteatlas_from_backup() -> None:
-    if SPRITEATLAS_BACKUP.exists():
-        shutil.copy2(SPRITEATLAS_BACKUP, SPRITEATLAS_AB)
-        if ASSET_MAP_BACKUP.exists():
-            shutil.copy2(ASSET_MAP_BACKUP, ASSET_MAP)
+    if not SPRITEATLAS_BACKUP.exists():
+        return
+    if SPRITEATLAS_AB.exists() and _backup_is_stale():
+        print(
+            "  [skip] spriteatlas 備份與現行檔大小差異過大，跳過還原（避免用舊版覆蓋遊戲更新後的資源）"
+        )
+        shutil.copy2(SPRITEATLAS_AB, SPRITEATLAS_BACKUP)
+        print(f"  [backup] 已從現行檔重建 {SPRITEATLAS_BACKUP.name}")
+        return
+    shutil.copy2(SPRITEATLAS_BACKUP, SPRITEATLAS_AB)
+    if ASSET_MAP_BACKUP.exists():
+        shutil.copy2(ASSET_MAP_BACKUP, ASSET_MAP)
 
 
 def apply_sprite_replacement(sprite_name: str, image_path: Path) -> None:
@@ -59,7 +67,9 @@ def apply_sprite_replacement(sprite_name: str, image_path: Path) -> None:
 
     source = _fit_icon(Image.open(image_path).convert("RGBA"), ICON_SIZE)
 
-    payload = SPRITEATLAS_BACKUP.read_bytes()[len(HEADER) :]
+    # 一律以「目前遊戲內」spriteatlas 為基底（備份可能來自舊版遊戲）
+    base_ab = SPRITEATLAS_AB if SPRITEATLAS_AB.exists() else SPRITEATLAS_BACKUP
+    payload = base_ab.read_bytes()[len(HEADER) :]
     env = UnityPy.load(payload)
 
     atlas_obj = None

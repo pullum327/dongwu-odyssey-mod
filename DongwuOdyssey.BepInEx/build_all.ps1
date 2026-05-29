@@ -29,6 +29,17 @@ foreach ($proj in $projects) {
 }
 
 if ($Deploy) {
+    $pluginConfig = Get-Content (Join-Path $Root "plugins.json") -Raw -Encoding UTF8 | ConvertFrom-Json
+    if ($pluginConfig -isnot [System.Array]) {
+        $pluginConfig = @($pluginConfig)
+    }
+    $harmonyPluginIds = New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::OrdinalIgnoreCase)
+    foreach ($entry in $pluginConfig) {
+        if ($entry.kind -eq "harmony" -or $entry.harmony) {
+            [void]$harmonyPluginIds.Add([string]$entry.id)
+        }
+    }
+
     if (Test-Path (Join-Path $BepPlugins "DongwuOdysseyMod")) {
         Remove-Item -Recurse -Force (Join-Path $BepPlugins "DongwuOdysseyMod")
     }
@@ -50,16 +61,12 @@ if ($Deploy) {
         $modCoreDll = Join-Path $Root "ModCore\bin\Release\net6.0\DongwuOdyssey.ModCore.dll"
         if (Test-Path $modCoreDll) { Copy-Item -Force $modCoreDll $dest }
         $harmonyDll = Join-Path $Root "HarmonyLib\bin\Release\net6.0\DongwuOdyssey.HarmonyLib.dll"
-        if ((Test-Path $harmonyDll) -and ($id -match "^ignite_")) {
+        if ((Test-Path $harmonyDll) -and $harmonyPluginIds.Contains($id)) {
             Copy-Item -Force $harmonyDll $dest
         }
         Write-Host "deploy -> $dest"
     }
 
-    $pluginConfig = Get-Content (Join-Path $Root "plugins.json") -Raw -Encoding UTF8 | ConvertFrom-Json
-    if ($pluginConfig -isnot [System.Array]) {
-        $pluginConfig = @($pluginConfig)
-    }
     $validDataIds = New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::OrdinalIgnoreCase)
     foreach ($entry in $pluginConfig) {
         if ($entry.kind -eq "data" -and $entry.id -ne "data_combined") {

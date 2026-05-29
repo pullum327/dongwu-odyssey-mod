@@ -58,16 +58,16 @@ KAXINADE_TEXT_KEYS = {
         "en-US": "Spiral Pursuit",
     },
     "EquipmentEffect_describe_7599004": {
-        "strings": "单体攻击技能额外造成一击，伤害为原先的50%",
-        "zh-Hant": "單體攻擊技能額外造成一擊，傷害為原先的50%",
-        "zh-Hans": "单体攻击技能额外造成一击，伤害为原先的50%",
-        "en-US": "Single-target attack skills deal an extra hit at 50% damage",
+        "strings": "单体伤害技能后可再动一次，再动期间自身伤害降低50%",
+        "zh-Hant": "單體傷害技能後可再動一次，再動期間自身傷害降低50%",
+        "zh-Hans": "单体伤害技能后可再动一次，再动期间自身伤害降低50%",
+        "en-US": "After a single-target damage skill, act again once; damage you deal is reduced by 50% during that action",
     },
     "EquipmentEffect_contentLv1_7599004": {
-        "strings": "单体攻击技能额外造成一击，伤害为原先的<param2[0].p>",
-        "zh-Hant": "單體攻擊技能額外造成一擊，傷害為原先的<param2[0].p>",
-        "zh-Hans": "单体攻击技能额外造成一击，伤害为原先的<param2[0].p>",
-        "en-US": "Single-target attacks deal an extra hit at <param2[0].p> damage",
+        "strings": "单体伤害技能后可再动一次，再动期间自身伤害降低50%",
+        "zh-Hant": "單體傷害技能後可再動一次，再動期間自身傷害降低50%",
+        "zh-Hans": "单体伤害技能后可再动一次，再动期间自身伤害降低50%",
+        "en-US": "After a single-target damage skill, act again once; damage you deal is reduced by 50% during that action",
     },
 }
 
