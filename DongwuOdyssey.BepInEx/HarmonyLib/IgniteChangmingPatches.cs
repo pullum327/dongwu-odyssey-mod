@@ -68,14 +68,12 @@ public static class IgniteChangmingPatches
 
         try
         {
-            var value = Il2CppReflection.GetInt64Field(__result, "AttributeValue");
-            if (value <= 0)
+            if (!Il2CppReflection.TryMultiplyEquipmentAttributeValue(__result, 3, out var value, out var tripled))
                 return;
 
-            Il2CppReflection.SetInt64Field(__result, "AttributeValue", value * 3);
             MarkTripled(__result);
             _roundingTriplesThisFlow++;
-            _log?.LogInfo($"  + 火煉生成詞條 ×3: {value} -> {value * 3}");
+            _log?.LogInfo($"  + 火煉生成詞條 ×3: {value} -> {tripled}");
         }
         catch (Exception ex)
         {
@@ -163,14 +161,12 @@ public static class IgniteChangmingPatches
                 if (pos == null || AlreadyTripled(pos))
                     continue;
 
-                var v = Il2CppReflection.GetInt64Field(pos, "AttributeValue");
-                if (v == 0)
+                if (!Il2CppReflection.TryMultiplyEquipmentAttributeValue(pos, 3, out var v, out var tripled))
                     continue;
 
-                Il2CppReflection.SetInt64Field(pos, "AttributeValue", v * 3);
                 MarkTripled(pos);
                 changed++;
-                _log?.LogInfo($"  + 火煉正面詞條 ×3: {v} -> {v * 3}");
+                _log?.LogInfo($"  + 火煉正面詞條 ×3: {v} -> {tripled}");
             }
 
             if (changed == 0)

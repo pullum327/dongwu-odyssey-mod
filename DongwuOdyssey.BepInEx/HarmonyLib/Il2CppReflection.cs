@@ -2,11 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using HarmonyLib;
 
 namespace DongwuOdyssey.HarmonyLib;
 
 public static class Il2CppReflection
 {
+    public const string EquipmentAttributeType = "Ogopogo.ServerInfo+EquipmentAttribute";
+
     private const BindingFlags InstanceFlags =
         BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
 
@@ -104,19 +107,45 @@ public static class Il2CppReflection
 
     public static void SetInt64Field(object instance, string fieldName, long value, string? declaredTypeName = null)
     {
-        foreach (var type in EnumerateTypes(instance, declaredTypeName))
+        if (!TrySetInt64Field(instance, fieldName, value, declaredTypeName))
+            throw new MissingFieldException(instance.GetType().FullName, fieldName);
+    }
+
+    public static long GetEquipmentAttributeValue(object attr) =>
+        GetInt64Field(attr, "AttributeValue", EquipmentAttributeType);
+
+    public static bool TryMultiplyEquipmentAttributeValue(object attr, int multiplier, out long before, out long after)
+    {
+        before = GetEquipmentAttributeValue(attr);
+        if (before == 0)
         {
-            for (var cur = type; cur != null; cur = cur.BaseType)
-            {
-                var field = cur.GetField(fieldName, InstanceFlags);
-                if (field == null)
-                    continue;
-                field.SetValue(instance, field.FieldType == typeof(int) ? (int)value : value);
-                return;
-            }
+            after = 0;
+            return false;
         }
 
-        throw new MissingFieldException(instance.GetType().FullName, fieldName);
+        after = before * multiplier;
+        if (TrySetInt64Field(attr, "AttributeValue", after, EquipmentAttributeType))
+            return true;
+
+        return TrySetFieldViaTraverse(attr, "AttributeValue", after);
+    }
+
+    private static bool TrySetFieldViaTraverse(object instance, string fieldName, long value)
+    {
+        try
+        {
+            var field = Traverse.Create(instance).Field(fieldName);
+            var current = field.GetValue();
+            if (current is int)
+                field.SetValue((int)value);
+            else
+                field.SetValue(value);
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
     }
 
     public static void SetBoolField(object instance, string fieldName, bool value, string? declaredTypeName = null)
