@@ -1,4 +1,4 @@
-#Requires -Version 5.1
+﻿#Requires -Version 5.1
 # Build combo-specific GitHub Release zips (plugins + patched-data + BepInEx).
 param(
     [switch]$SkipUpload
@@ -11,7 +11,7 @@ function Resolve-GameDirFromScript([string]$bepInExRoot) {
     if (Test-Path (Join-Path $parent "AnimOdyssey.exe")) { return $parent }
     $grand = Split-Path -Parent $parent
     if (Test-Path (Join-Path $grand "AnimOdyssey.exe")) { return $grand }
-    throw "無法判定遊戲根目錄：請在含 AnimOdyssey.exe 的目錄下執行（遊戲根或 _ignite_mod 內的 DongwuOdyssey.BepInEx）"
+    throw "Cannot resolve game root (run from game root or _ignite_mod/DongwuOdyssey.BepInEx; need AnimOdyssey.exe nearby)"
 }
 
 function Resolve-BepInExSourceRoot([string]$GameDir) {
@@ -21,11 +21,11 @@ function Resolve-BepInExSourceRoot([string]$GameDir) {
         )) {
         if (Test-Path (Join-Path $p "build_all.ps1")) { return $p }
     }
-    throw "找不到 DongwuOdyssey.BepInEx（需含 build_all.ps1）"
+    throw "DongwuOdyssey.BepInEx not found (need build_all.ps1)"
 }
 
 function Copy-TreeExcluding([string]$src, [string]$dest, [string[]]$excludeDirNames) {
-    if (-not (Test-Path $src)) { throw "缺少來源: $src" }
+    if (-not (Test-Path $src)) { throw "Missing source: $src" }
     New-Item -ItemType Directory -Force -Path $dest | Out-Null
     $excludeSet = New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::OrdinalIgnoreCase)
     foreach ($n in $excludeDirNames) { [void]$excludeSet.Add($n) }
@@ -43,26 +43,24 @@ function Copy-TreeExcluding([string]$src, [string]$dest, [string[]]$excludeDirNa
 function Copy-BuildSourceStaging([string]$destRoot, [string]$GameDir) {
     $igniteSrc = Join-Path $GameDir "_ignite_mod"
     if (-not (Test-Path (Join-Path $igniteSrc "apply_mods.py"))) {
-        throw "缺少 _ignite_mod\apply_mods.py（遊戲根目錄下需有 _ignite_mod）"
+        throw "Missing _ignite_mod\apply_mods.py under game root"
     }
     $bepSrc = Resolve-BepInExSourceRoot $GameDir
     $exclude = @(".git", "dist", "bin", "obj", "__pycache__", ".venv", "venv")
     Copy-TreeExcluding $igniteSrc (Join-Path $destRoot "_ignite_mod") ($exclude + @("DongwuOdyssey.BepInEx"))
     Copy-TreeExcluding $bepSrc (Join-Path $destRoot "DongwuOdyssey.BepInEx") $exclude
-    $hint = @"
-# dongwu-mod-build-source
-
-解壓到《東吳大冒險》Steam 遊戲根目錄（與 AnimOdyssey.exe 同層）。
-
-需求：.NET 6 SDK、Python 3（pip install UnityPy）
-
-建置並部署到 BepInEx\plugins\、合併 game_data.ab：
-  cd DongwuOdyssey.BepInEx
-  .\build_all.ps1 -Deploy
-
-Steam 遊戲更新後必做步驟：見 _ignite_mod\README.md「Steam 遊戲更新後」。
-"@
-    Set-Content -Path (Join-Path $destRoot "BUILD_SOURCE_README.md") -Encoding UTF8 -Value $hint
+    $hintLines = @(
+        '# dongwu-mod-build-source',
+        '',
+        'Extract to Steam game root (same folder as AnimOdyssey.exe).',
+        '',
+        'Requires: .NET 6 SDK, Python 3 + UnityPy (pip install UnityPy).',
+        '',
+        'Build: cd DongwuOdyssey.BepInEx; .\build_all.ps1 -Deploy',
+        '',
+        'After Steam game update: see _ignite_mod\README.md (zh-Hant section).'
+    )
+    Set-Content -Path (Join-Path $destRoot "BUILD_SOURCE_README.md") -Encoding UTF8 -Value ($hintLines -join "`n")
 }
 
 $GameDir = Resolve-GameDirFromScript $PSScriptRoot
@@ -191,7 +189,7 @@ foreach ($combo in $Combos) {
     Remove-Item -Recurse -Force $sourceStage
     Set-Content -Path (Join-Path $outDir "INSTALL.md") -Encoding UTF8 -Value $combo.Notes
 
-    Write-Host "built $($combo.Tag) (+ build source)"
+    Write-Host "built $($combo.Tag) [with dongwu-mod-build-source.zip]"
     if (-not $SkipUpload) {
         Publish-GhRelease $combo $bepZip $pluginsZip $dataZip $sourceZip (Join-Path $outDir "INSTALL.md")
     }
